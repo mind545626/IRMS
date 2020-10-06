@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 0vh;
+    font-family: Poppins-Regular, sans-serif;
+}
+
+header > img {
+    height: 110%;
+    width: auto;
+    padding: 1rem;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    background: rgba(#fff, 0.9);
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 4px rgba(#13232f, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login {
+    &__logo {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        text-align: center;
+        color: #414141;
+        font-weight: 600;
+        margin: 0 0 20px;
+        letter-spacing: 1px;
+    }
+    &__subtitle{
+        margin-left: 5px;
+        letter-spacing: 2px;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        border: 0;
+        outline: none;
+        border-radius: 0;
+        padding: 8px 15px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        background: #276476;
+        color: #fff;
+        transition: all 0.5s ease;
+        -webkit-appearance: none;
+
+        &:hover,
+        &:focus {
+            background: darken(#276476, 8%);
+        }
+    }
+}
+
+.field-wrap {
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+mat-label {
+    color: rgba(#000, 0.5);
+}
+
+input {
+    font-size: 1.5rem;
+    color: #000;
+
+    &:focus {
+        color: #a0b3b0;
+    }
+}
+
+::ng-deep.mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: rgba(#000, 0.5) !important; 
+}
+
+::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: rgba(#000, 0.5) !important;
+}
+
+.lang-container{
+    display: inline-flex;
+    align-items: center;
+    .fa-flag{
+        color: #7e7e7e;
+        margin-right: 5px;
+    }
+}
+.lang-txt{
+    font-size: 12px;
+    font-weight: 500;
+    color: #7e7e7e;
+    margin-right: 20px;
+}

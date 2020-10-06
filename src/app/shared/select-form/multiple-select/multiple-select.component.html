@@ -1,0 +1,19 @@
+<div class="d-flex">
+    <label for=""> {{ label }} </label>
+    <mat-form-field>
+        <mat-label>{{placeholder}}</mat-label>
+        <mat-select [formControl]="multiCtrl" [multiple]="true" #multiSelect>
+            <mat-select-trigger>
+                {{multiCtrl.value.length > 0 ? multiCtrl.value[0][value] : ''}}
+                <span *ngIf="multiCtrl.value?.length > 1" class="additional-selection text-danger">
+                    (共選擇{{multiCtrl.value.length}}筆)
+                </span>
+            </mat-select-trigger>
+            <mat-select-search [formControl]="multiFilterCtrl"></mat-select-search>
+            <app-select-check-all [model]="multiCtrl" [values]="filteredItemsMulti | async" [text]="'全部'"> </app-select-check-all>
+            <mat-option *ngFor="let item of filteredItemsMulti | async" [value]="item">
+                {{item[value]}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

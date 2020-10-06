@@ -1,0 +1,77 @@
+<!-- MAIN CONTENT -->
+<div id="content">
+  <div class="row">
+      <sa-big-breadcrumbs [items]="['審核作業', '審核工作區']" icon="briefcase" class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+      </sa-big-breadcrumbs>
+  </div>
+
+  <!-- 查詢結果面板 START -->
+  <div class="result-container">
+      <div class="title">
+          <i class="fa fa-tasks"></i>
+          <span>審核工作區</span>
+      </div>
+
+      <!-- PrimeNG Table START -->
+      <p-table #dt [columns]="cols" [value]="approvals" [paginator]="true" [scrollable]="true" [rows]="10"
+               [(selection)]="selectedOrders" [resizableColumns]="true" [style]="{width: '100%'}"
+               [showCurrentPageReport]="true" 
+               currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+               [rowsPerPageOptions]="[10,20,30]"
+               styleClass="p-datatable-customers">
+          <ng-template pTemplate="colgroup" let-columns>
+              <colgroup>
+                  <col *ngFor="let col of columns" [style.width]="col.width">
+              </colgroup>
+          </ng-template>
+          <ng-template pTemplate="header" let-columns>
+              <tr>
+                  <th *ngFor="let col of columns">
+                      {{col.header | i18n }}
+                  </th>
+              </tr>
+              <tr>
+                  <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                      <div style="width: 60px" *ngSwitchCase="'select'"></div>
+                      <input *ngSwitchCase="'Department'" pInputText type="text"
+                             (input)="dt.filter($event.target.value, col.field, 'contains')">
+                      <input *ngSwitchCase="'EnglishName'" pInputText type="text"
+                             (input)="dt.filter($event.target.value, col.field, 'contains')">
+                      <input *ngSwitchCase="'Update'" pInputText type="text"
+                             (input)="dt.filter($event.target.value, col.field, 'contains')">
+                      <input *ngSwitchCase="'ApplyDate'" pInputText type="text"
+                             (input)="dt.filter($event.target.value, col.field, 'contains')">
+                      <p-dropdown *ngSwitchCase="'ApplyType'" [showClear]="true" [options]="applytype"
+                                  (onChange)="dt.filter($event.value, col.field, 'equals')"></p-dropdown>
+                      <p-dropdown *ngSwitchCase="'ApprovalStatus'" [showClear]="true" [options]="approval"
+                                  (onChange)="dt.filter($event.value, col.field, 'equals')"></p-dropdown>
+      
+                  </th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-rowData let-columns="columns" let-order>
+              <tr>
+                  <td *ngFor="let col of columns" class="ui-resizable-column">
+                 
+                  <ng-container *ngIf="col.field == 'ApprovalStatus'">
+                      <button  [class]="'approval-status-' + order.status" >
+                          {{rowData[col.field]}}
+                      </button>
+                  </ng-container>
+                  <ng-container *ngIf="col.field == 'Function'">
+                    <button class="btn btn-primary">
+                      <i class="fa fa-gavel"></i>批核</button>
+                    <button class="btn btn-danger">
+                      <i class="fa fa-reply"></i>退回</button>
+                </ng-container>
+                  <ng-container *ngIf="col.field !== 'Function' && col.field !== 'ApprovalStatus'">
+                      {{rowData[col.field]}}
+                  </ng-container>
+                  </td>
+              </tr>
+          </ng-template>
+      </p-table>
+      <!-- PrimeNG Table END -->
+  </div>
+  <!-- 查詢結果面板 END -->
+</div>

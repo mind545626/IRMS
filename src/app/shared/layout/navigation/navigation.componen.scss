@@ -1,0 +1,52 @@
+
+#left-panel{
+  background: linear-gradient(to bottom, #8DB6B2 100%, #8DB6B2 100%);
+  box-shadow: 0 5px 5px #555;
+  nav>ul>li{
+    border-bottom: 2px solid #7da19e;
+    padding: 10px 0;
+    &:hover{
+      background: linear-gradient(to bottom, #7da19e, #7da19e);
+    }
+    a{
+      color: #ffff;
+      &:active{
+        background-color: #7da19e !important ;
+      }
+      &:hover{
+        color: #FFEA2B;
+      }
+    }
+    ul{
+      background-color: #62807d;
+      a{
+        color: #ffff;
+        &:active{
+          background-color: #7da19e !important ;
+        }
+        &:hover{
+          color: #FFEA2B;
+        }
+      }
+    }
+  }
+}
+
+nav ul ul li a,  nav ul ul ul li a{
+  &:hover{
+    color: #FFEA2B;
+  }
+}
+
+nav ul li.open>a, nav ul li.open>a,aside#left-panel nav>ul>li:hover>a{
+ color: #FFF !important;
+}
+nav ul ul ul, nav ul ul{
+  border-bottom: none;
+}
+
+nav ul ul li a:hover,  nav ul ul li:hover>a,  nav ul ul ul li a:hover{
+  background-color: #7da19e;
+}
+//下拉式選單
+

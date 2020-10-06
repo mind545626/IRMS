@@ -1,0 +1,57 @@
+<div id="add_payment" class="pop-wrapper">
+  <form class="form-horizontal">
+    <div class="form-group sub-title-container">
+      <div class="sub-title col-sm-6">
+        <i class="fa fa-dollar fa-size-md"></i>
+        <h3>新增付款條件</h3>
+      </div>
+      <div class="col-sm-6 text-right">
+        <i class="fa  fa-times  fa-size-md" (click)="close_detail()"></i>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Liaison"><span class="must-icon">＊</span>付款<br>項目</label>
+      <div class="col-sm-10">
+        <input class="form-control" type="text" placeholder="請輸入文件名稱">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Liaison"><span class="must-icon">＊</span>付款<br>比例</label>
+      <div class="col-sm-10">
+        <select type="text" class="form-control" id="LiaisonStopMark">
+          <option selected>請選擇</option>
+          <option>test1</option>
+          <option>test2</option>
+          <option>test3</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Liaison"><span class="must-icon">＊</span>本地金額</label>
+      <div class="col-sm-10">
+        <select type="text" class="form-control" id="LiaisonStopMark">
+          <option selected>請選擇</option>
+          <option>test1</option>
+          <option>test2</option>
+          <option>test3</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Liaison"><span class="must-icon">＊</span>付款日期</label>
+      <div class="col-sm-10">
+        <mat-form-field>
+          <input matInput [matDatepicker]="paymentdate" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="paymentdate"></mat-datepicker-toggle>
+          <mat-datepicker #paymentdate></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="btn-container">
+        <button type="button" class="btn btn-success btn-margin-right"><i class="fa  fa-check"></i>確認新增</button>
+        <button type="button" class="btn btn-danger btn-margin-right" (click)="close_detail()"><i class="fa  fa-times"></i>取消修改</button>
+      </div>
+    </div>
+  </form>
+</div>

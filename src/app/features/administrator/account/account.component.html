@@ -1,0 +1,35 @@
+<div id="content">
+
+    <div class="row">
+        <sa-big-breadcrumbs [items]="['系統管理', '系統權限管理']" class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        </sa-big-breadcrumbs>
+    </div>
+
+    <!-- 查詢 -->
+    <div class="row">
+        <article class="col-xs-12">
+            <div class="panel panel-default">
+                <mat-card class="example-card">
+                    <mat-card-header *ngIf="(currentUser$ | async) as currentUser">
+                        <div mat-card-avatar>
+                            <img src="assets/img/avatars/user.png" 
+                            class="rounded-circle shadow-2 img-thumbnail">
+                        </div>
+                        <mat-card-title>使用者：{{ currentUser['UserName'] }} </mat-card-title>
+                        <mat-card-subtitle>單位：{{ currentUser['DeptName'] }} </mat-card-subtitle>
+                        <mat-card-subtitle>職稱：{{ currentUser['GradeName'] }} </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-actions>
+                        <div class="btn__submit">
+                            <button mat-stroked-button color="primary">變更密碼</button>
+                        </div>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </article>
+    </div>
+
+
+    
+   
+</div>

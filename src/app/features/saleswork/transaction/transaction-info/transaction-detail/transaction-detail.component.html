@@ -1,0 +1,182 @@
+<div class="detail-container">
+  <form class="form-horizontal">
+    <section>
+      <div class="sub-title">
+        <i class="fa fa-list-alt fa-size-md"></i>
+        <h3>交易明細</h3>
+      </div>
+      <div class="product-container">
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="CustomerID">產品</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="CustomerID">
+          </div>
+          <label class="control-label col-sm-1" for="FullName">其他產品說明</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="FullName">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="CustomerID">品牌</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="CustomerID">
+          </div>
+          <label class="control-label col-sm-1" for="FullName">其他品牌說明</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="FullName">
+          </div>
+        </div>
+      </div>
+      <ag-grid-angular style="width: 100%; height: 400px;" class="ag-theme-alpine" 
+        [rowData]="rowData"
+        [columnDefs]="columnDefs" 
+        [rowSelection]="rowSelection" 
+        [defaultColDef]="defaultColDef"
+        (firstDataRendered)="onFirstDataRendered($event)" 
+        (gridReady)="onGridReady($event)">
+      </ag-grid-angular>
+      <div class="form-group mr-top">
+        <label class="control-label col-sm-1" for="AllWords">總字數</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="AllWords">
+        </div>
+      </div>
+      <div class="form-group mr-top">
+        <label class="control-label col-sm-1" for="CustomerID">稅前合計</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="CustomerID">稅額</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="CustomerID">稅後總額</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="CustomerID">外幣稅前合計</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="CustomerID">外幣稅額</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="CustomerID">外幣稅後總額</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+      </div>
+    </section>
+    <section class="section-middle">
+      <div class="sub-title">
+        <i class="fa fa-money fa-size-md"></i>
+        <h3>其他款項</h3>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="CustomerID">代付款項名稱</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="FullName">代付款項金額</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="FullName">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="CustomerID">住宿費</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="FullName">誤餐費</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="FullName">
+        </div>
+        <label class="control-label col-sm-1" for="FullName">車資</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="FullName">
+        </div>
+      </div>
+    </section>
+    <section class="section-bottom">
+      <div class="sub-title">
+        <i class="fa fa-dollar fa-size-md"></i>
+        <h3>付款條件</h3>
+      </div>
+      <div class="form-group table-container">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>付款項目</th>
+              <th>付款比例</th>
+              <th>付款金額</th>
+              <th>本地金額</th>
+              <th>付款日期</th>
+            </tr>  
+          </thead>
+          <tbody>
+            <tr>
+              <td class="pd-top">
+                <select class="form-control" name="" id="" disabled="disabled">
+                  <option value="2" selected>訂金</option>
+                  <option value="3">交件收款</option>
+                  <option value="4">尾款</option>
+                </select>
+              </td>
+              <td class="pd-top">20%</td>
+              <td class="pd-top">125</td>
+              <td class="pd-top">4,050</td>
+              <td>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="paymentdate_1"[formControl]="Date1" disabled>
+                  <mat-datepicker-toggle matSuffix [for]="paymentdate_1"></mat-datepicker-toggle>
+                  <mat-datepicker #paymentdate_1></mat-datepicker>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td class="pd-top">
+                <select class="form-control" name="" id="" disabled="disabled">
+                  <option value="2">訂金</option>
+                  <option value="3" selected>交件收款</option>
+                  <option value="4">尾款</option>
+                </select>
+              </td>
+              <td class="pd-top">40%</td>
+              <td class="pd-top">249</td>
+              <td class="pd-top">8,100</td>
+              <td>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="paymentdate_2"[formControl]="Date2" disabled>
+                  <mat-datepicker-toggle matSuffix [for]="paymentdate_2"></mat-datepicker-toggle>
+                  <mat-datepicker disabled #paymentdate_2></mat-datepicker>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td class="pd-top">
+                <select class="form-control" name="" id=""  disabled="disabled">
+                  <option value="2">訂金</option>
+                  <option value="3">交件收款</option>
+                  <option value="4" selected>尾款</option>
+                </select>
+              </td>
+              <td class="pd-top">40%</td>
+              <td class="pd-top">249</td>
+              <td class="pd-top">8,100</td>
+              <td>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="paymentdate_3"[formControl]="Date3" disabled>
+                  <mat-datepicker-toggle matSuffix [for]="paymentdate_3"></mat-datepicker-toggle>
+                  <mat-datepicker #paymentdate_3></mat-datepicker>
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+    </section>
+  </form>
+</div>

@@ -1,0 +1,419 @@
+{
+    "data" : [
+        { 
+            "no": "1",
+            "CustomerID": "542312", 
+            "FullName": "本仁元股份有限公司",
+            "FLFullName": "Bunlan", 
+            "CompTaxNo": "74823941", 
+            "Liaison": [
+                {
+                    "LiaisonName": "吳秋順",
+                    "Title": "企劃部/部門職員",
+                    "Tel": "+886 315 002 719#322",
+                    "CellPhone": "0937-243-679",
+                    "Email": "abcde123@mail.com",
+                    "Notification": "有",
+                    "StopRemark": "正常",
+                    "EnglishName": "Sam"
+                },
+                {
+                    "LiaisonName": "林志成",
+                    "Title": "業務部/業務經理",
+                    "Tel": "+886 590 416 539#234",
+                    "CellPhone": "0963-511-037",
+                    "Email": "abcde123@mail.com",
+                    "Notification": "無",
+                    "StopRemark": "正常",
+                    "EnglishName": "Shane"
+                },
+                {
+                    "LiaisonName": "林怡文",
+                    "Title": "會計部/會計經理",
+                    "Tel": "+886 968 758 666#25672",
+                    "CellPhone": "0902-651-834",
+                    "Email": "abcde123@mail.com",
+                    "Notification": "有",
+                    "StopRemark": "正常",
+                    "EnglishName": "Peter"
+                },
+                {
+                    "LiaisonName": "陳倫映",
+                    "Title": "採購部/部門職員",
+                    "Tel": "+886 968 056 666#32411",
+                    "CellPhone": "0972-243-760",
+                    "Email": "abcde123@mail.com",
+                    "Notification": "有",
+                    "StopRemark": "正常",
+                    "EnglishName": "Mary"
+                },
+                {
+                    "LiaisonName": "林靜宜",
+                    "Title": "人事部/人事經理",
+                    "Tel": "+886 968 641 069#104",
+                    "CellPhone": "0928-741-211",
+                    "Email": "abcde123@mail.com",
+                    "Notification": "無",
+                    "StopRemark": "正常",
+                    "EnglishName": "Jessie"
+                }
+            ], 
+            "Tel": "34993891#177",
+            "Address": "嘉義縣阿里山鄉三多五街663巷394弄995號",
+            "StopMark": "正常", 
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "2",
+            "CustomerID": "478321", 
+            "FullName": "長安祥股份有限公司",
+            "FLFullName": "Changan", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "張大發", 
+            "Tel": "24273323#245",
+            "Address": "連江縣南竿鄉大源二十路417巷807號",
+            "StopMark": "正常", 
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "3",
+            "CustomerID": "323398", 
+            "FullName": "鼎宏聖股份有限公司",
+            "FLFullName": "Dinhonson", 
+            "CompTaxNo": "37857123", 
+            "Liaison": "李小美", 
+            "Tel": "07984721#423", 
+            "Address": "南投縣仁愛鄉路科一街551巷767號",
+            "StopMark": "正常",
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "4",
+            "CustomerID": "946871", 
+            "FullName": "裕盛股份有限公司",
+            "FLFullName": "Yuson", 
+            "CompTaxNo": "47853214", 
+            "Liaison": "陳小英", 
+            "Tel": "0223628293#21358",
+            "Address": "嘉義縣六腳鄉苓安街946巷308弄890號", 
+            "StopMark": "停用",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "5",
+            "CustomerID": "872314", 
+            "FullName": "中宏股份有限公司",
+            "FLFullName": "Chunghon", 
+            "CompTaxNo": "28423798", 
+            "Liaison": "江大山", 
+            "Tel": "03550569",
+            "Address": "嘉義市東區陽東營區忠三街970號36樓", 
+            "StopMark": "正常",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "6",
+            "CustomerID": "469823", 
+            "FullName": "恆飛本股份有限公司",
+            "FLFullName": "Henfabun", 
+            "CompTaxNo": "34823409", 
+            "Liaison": "劉中吉", 
+            "Tel": "80273323#60225",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號",
+            "StopMark": "停用", 
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "7",
+            "CustomerID": "289341", 
+            "FullName": "仁中信股份有限公司",
+            "FLFullName": "Lanchungxin", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "蔡小茂", 
+            "Tel": "21799635#1207",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "正常",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "8",
+            "CustomerID": "234092", 
+            "FullName": "萬盛股份有限公司",
+            "FLFullName": "Whanson", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "李中凱", 
+            "Tel": "034709903#12642",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "停用",
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "9",
+            "CustomerID": "472654", 
+            "FullName": "隆和股份有限公司",
+            "FLFullName": "Longhe", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "羅大信", 
+            "Tel": "22870976#103",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "正常",
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "10",
+            "CustomerID": "298340", 
+            "FullName": "慶通股份有限公司",
+            "FLFullName": "Chinton", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "陳小偉", 
+            "Tel": "028714931#317",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "正常",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "2",
+            "CustomerID": "478321", 
+            "FullName": "長安祥股份有限公司",
+            "FLFullName": "Changan", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "張大發", 
+            "Tel": "24273323#245",
+            "Address": "連江縣南竿鄉大源二十路417巷807號",
+            "StopMark": "正常", 
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "3",
+            "CustomerID": "323398", 
+            "FullName": "鼎宏聖股份有限公司",
+            "FLFullName": "Dinhonson", 
+            "CompTaxNo": "37857123", 
+            "Liaison": "李小美", 
+            "Tel": "07984721#423", 
+            "Address": "南投縣仁愛鄉路科一街551巷767號",
+            "StopMark": "正常",
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "4",
+            "CustomerID": "946871", 
+            "FullName": "裕盛股份有限公司",
+            "FLFullName": "Yuson", 
+            "CompTaxNo": "47853214", 
+            "Liaison": "陳小英", 
+            "Tel": "0223628293#21358",
+            "Address": "嘉義縣六腳鄉苓安街946巷308弄890號", 
+            "StopMark": "停用",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "5",
+            "CustomerID": "872314", 
+            "FullName": "中宏股份有限公司",
+            "FLFullName": "Chunghon", 
+            "CompTaxNo": "28423798", 
+            "Liaison": "江大山", 
+            "Tel": "03550569",
+            "Address": "嘉義市東區陽東營區忠三街970號36樓", 
+            "StopMark": "正常",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "6",
+            "CustomerID": "469823", 
+            "FullName": "恆飛本股份有限公司",
+            "FLFullName": "Henfabun", 
+            "CompTaxNo": "34823409", 
+            "Liaison": "劉中吉", 
+            "Tel": "80273323#60225",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號",
+            "StopMark": "停用", 
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "7",
+            "CustomerID": "289341", 
+            "FullName": "仁中信股份有限公司",
+            "FLFullName": "Lanchungxin", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "蔡小茂", 
+            "Tel": "21799635#1207",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "正常",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "8",
+            "CustomerID": "234092", 
+            "FullName": "萬盛股份有限公司",
+            "FLFullName": "Whanson", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "李中凱", 
+            "Tel": "034709903#12642",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "停用",
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "9",
+            "CustomerID": "472654", 
+            "FullName": "隆和股份有限公司",
+            "FLFullName": "Longhe", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "羅大信", 
+            "Tel": "22870976#103",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "正常",
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "10",
+            "CustomerID": "298340", 
+            "FullName": "慶通股份有限公司",
+            "FLFullName": "Chinton", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "陳小偉", 
+            "Tel": "028714931#317",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "正常",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "2",
+            "CustomerID": "478321", 
+            "FullName": "長安祥股份有限公司",
+            "FLFullName": "Changan", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "張大發", 
+            "Tel": "24273323#245",
+            "Address": "連江縣南竿鄉大源二十路417巷807號",
+            "StopMark": "正常", 
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "3",
+            "CustomerID": "323398", 
+            "FullName": "鼎宏聖股份有限公司",
+            "FLFullName": "Dinhonson", 
+            "CompTaxNo": "37857123", 
+            "Liaison": "李小美", 
+            "Tel": "07984721#423", 
+            "Address": "南投縣仁愛鄉路科一街551巷767號",
+            "StopMark": "正常",
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "4",
+            "CustomerID": "946871", 
+            "FullName": "裕盛股份有限公司",
+            "FLFullName": "Yuson", 
+            "CompTaxNo": "47853214", 
+            "Liaison": "陳小英", 
+            "Tel": "0223628293#21358",
+            "Address": "嘉義縣六腳鄉苓安街946巷308弄890號", 
+            "StopMark": "停用",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "5",
+            "CustomerID": "872314", 
+            "FullName": "中宏股份有限公司",
+            "FLFullName": "Chunghon", 
+            "CompTaxNo": "28423798", 
+            "Liaison": "江大山", 
+            "Tel": "03550569",
+            "Address": "嘉義市東區陽東營區忠三街970號36樓", 
+            "StopMark": "正常",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "6",
+            "CustomerID": "469823", 
+            "FullName": "恆飛本股份有限公司",
+            "FLFullName": "Henfabun", 
+            "CompTaxNo": "34823409", 
+            "Liaison": "劉中吉", 
+            "Tel": "80273323#60225",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號",
+            "StopMark": "停用", 
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "7",
+            "CustomerID": "289341", 
+            "FullName": "仁中信股份有限公司",
+            "FLFullName": "Lanchungxin", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "蔡小茂", 
+            "Tel": "21799635#1207",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "正常",
+            "RegionType": "CN"
+            
+        },
+        { 
+            "no": "8",
+            "CustomerID": "234092", 
+            "FullName": "萬盛股份有限公司",
+            "FLFullName": "Whanson", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "李中凱", 
+            "Tel": "034709903#12642",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "停用",
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "9",
+            "CustomerID": "472654", 
+            "FullName": "隆和股份有限公司",
+            "FLFullName": "Longhe", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "羅大信", 
+            "Tel": "22870976#103",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "正常",
+            "RegionType": "TW"
+            
+        },
+        { 
+            "no": "10",
+            "CustomerID": "298340", 
+            "FullName": "慶通股份有限公司",
+            "FLFullName": "Chinton", 
+            "CompTaxNo": "42223487", 
+            "Liaison": "陳小偉", 
+            "Tel": "028714931#317",
+            "Address": "新北市雙溪區東英三路七段99巷162弄117號", 
+            "StopMark": "正常",
+            "RegionType": "CN"
+            
+        }
+    ]
+}

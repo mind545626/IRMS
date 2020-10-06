@@ -1,0 +1,111 @@
+<div id="content">
+
+    <div class="row">
+        <sa-big-breadcrumbs [items]="['計費查核', '保養報表']" class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        </sa-big-breadcrumbs>
+    </div>
+
+    <!-- 查詢 -->
+    <div class="row">
+        <article class="col-xs-12">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <span>查詢條件</span>
+                </div>
+
+                <form [formGroup]='searchForm'>
+                    <div class="panel-body">
+
+                        <div class="d-flex col-xs-12 col-md-6">
+                            <label for="">日期與時段</label>
+                            <mat-form-field>
+                                <input 
+                                    matInput 
+                                    ngxDaterangepickerMd  
+                                    placeholder="請選擇"
+                                    [formControl]="searchForm.get('date')" 
+                                    showDropdowns="true" 
+                                    startKey="StartTime" 
+                                    endKey="EndTime"
+                                    [locale]="{format: 'YYYY-MM',
+                                    displayFormat: 'YYYY-MM'}" 
+                                    [minDate]="min"
+                                    [maxDate]="max" 
+                                    [dateLimit]="dateLimit"
+                                    [autoApply]="true"/>
+                            </mat-form-field>
+                        </div>
+
+                        <!-- <p> Form value: {{ searchForm.get('date').value["StartTime"] | json}} </p> -->
+                        
+                    </div>
+                    <div class="panel-footer">
+                        <div class="btn__submit">
+                            <button mat-flat-button type="submit" color="primary" (click)="search()">
+                                送出查詢</button>
+                            <button mat-flat-button type="submit" color="warn">
+                                取消重選</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </article>
+    </div>
+
+
+    <!--  總表 -->
+    <div class="row" *ngIf="result">
+        <article class="col-xs-12">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <span> {{ searchForm.get('date').value["StartTime"] | date: 'yyyy/MM'}} -
+                        {{ searchForm.get('date').value["EndTime"] | date: 'yyyy/MM'}} 保養總表</span>
+                </div>
+
+                <div class="panel-body">
+                    <kunyu-table [tableOptions]="totalOptions"></kunyu-table>
+                </div>
+
+            </div>
+
+
+        </article>
+    </div>
+
+    <!--  明細資料結果 -->
+    <div class="row" *ngIf="result">
+        <article class="col-xs-12">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <span> {{ searchForm.get('date').value["StartTime"] | date: 'yyyy/MM'}} -
+                        {{ searchForm.get('date').value["EndTime"] | date: 'yyyy/MM'}} 保養明細</span>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="btn__add">
+                        <button type="submit" mat-flat-button color="accent"
+                            (click)="exporter.exportTable('xlsx', {fileName:'2020年1月保養明細表', sheet: 'sheet_name', Props: {}})">匯出EXCEL</button>
+                        <button type="submit" mat-flat-button color="accent" (click)="exportPDF()">匯出PDF</button>
+                    </div>
+
+                    
+                    <div id="pdfTable" #pdfTable>
+
+                        <kunyu-table [tableOptions]="detailOptions" matTableExporter #exporter="matTableExporter" ></kunyu-table>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </article>
+    </div>
+</div>

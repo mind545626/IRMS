@@ -1,0 +1,176 @@
+<div id="content">
+
+    <div class="row">
+        <sa-big-breadcrumbs [items]="['系統管理', '公告管理']" class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        </sa-big-breadcrumbs>
+    </div>
+
+    <!-- 查詢 -->
+    <div class="row">
+        <article class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span>公告時間範圍</span>
+                </div>
+
+                <form [formGroup]='searchForm'>
+                    <div class="panel-body">
+
+                        <div class="d-flex col-xs-12 col-md-6">
+                            <label for="">日期與時段</label>
+                            <mat-form-field>
+                                <input 
+                                    matInput 
+                                    ngxDaterangepickerMd  
+                                    placeholder="請選擇"
+                                    [formControl]="searchForm.get('date')" 
+                                    showDropdowns="true" 
+                                    startKey="StartTime" 
+                                    endKey="EndTime"
+                                    [locale]="{applyLabel: '確認', format: 'YYYY-MM-DD HH:mm:ss.SSSS',
+                                    displayFormat: 'YYYY-MM-DD'}" 
+                                    [minDate]="min"
+                                    [maxDate]="max" 
+                                    [autoApply]="true"
+                                    />
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+
+                    <div class="panel-footer">
+                        <div class="btn__submit">
+                            <button mat-flat-button type="submit" color="primary" (click)="search()">
+                                送出查詢</button>
+                            <button mat-flat-button type="submit" color="warn">
+                                取消重選</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </article>
+    </div>
+
+
+    <!--  公告列表 -->
+    <div class="row" *ngIf="result">
+        <article class="col-xs-12">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <span>公告列表</span>
+                </div>
+
+                <div class="panel-body">
+                    <div class="btn__add">
+                        <button type="submit" mat-flat-button color="accent" (click)="addNew()">新增公告</button>
+                    </div>
+
+                    <kunyu-table [(tableOptions)]="tableOptions"> </kunyu-table>
+                </div>
+
+            </div>
+
+        </article>
+    </div>
+
+    <!-- 新增公告 -->
+    <div class="row" *ngIf="add">
+        <article class="col-xs-12">
+
+            <div class="btn__return">
+                <button type="submit" mat-flat-button color="accent" (click)="return()">返回公告列表</button>
+            </div>
+
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <span>新增公告</span>
+                </div>
+                <form [formGroup]='bulletinForm' (ngSubmit)="onSubmit()">
+                    <div class="panel-body">
+
+                        <div class="d-flex col-xs-12 col-md-6">
+                            <label for="">公告時間區間</label>
+                            <mat-form-field>
+                                <input 
+                                    matInput 
+                                    ngxDaterangepickerMd  
+                                    placeholder="請選擇"
+                                    [formControl]="bulletinForm.get('date')" 
+                                    showDropdowns="true" 
+                                    startKey="StartTime" 
+                                    endKey="EndTime"
+                                    [locale]="{applyLabel: '確認', format: 'YYYY-MM-DD',
+                                    displayFormat: 'YYYY-MM-DD'}" 
+                                    [minDate]="min"
+                                    [maxDate]="max" 
+                                    [autoApply]="true"/>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="d-flex col-xs-12 col-md-6 m-1">
+                            <label for="">公告標題</label>
+                            <mat-form-field>
+                                <mat-label>請輸入公告標題</mat-label>
+                                <input matInput placeholder="請輸入公告主題" formControlName='subject' required>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="d-flex col-xs-12 col-md-6 m-1">
+                            <label for="">是否置頂</label>
+                            <mat-form-field>
+                                <mat-select formControlName="ontop">
+                                    <mat-option *ngFor="let item of option" [value]="item">
+                                        {{ item }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="d-flex col-xs-12 col-md-6 m-1">
+                            <label for="">公告內容</label>
+                            <mat-form-field>
+                                <mat-label>請輸入公告內容</mat-label>
+                                <textarea class="bulletin__content" matInput placeholder="請輸入公告內容" formControlName='content' required></textarea>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="d-flex col-xs-12 col-md-6 m-1">
+                            <label for="">上傳附件</label>
+                            <input type="file" (change)="onFileChange($event)"/>
+                        </div>
+                
+                        <p> Form value: {{ bulletinForm.value | json}} </p>
+                
+                    </div>
+                
+                    <div class="panel-footer">
+                        <div class="btn__submit">
+                            <button mat-raised-button type="submit" [disabled]="!bulletinForm.valid" color="primary" (click)="postBulletin()">發布公告</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </article>
+    </div>
+
+</div>
+
+<ng-template #templateIsExpired let-element="element">
+    <span [ngClass]="element.isExpired == '是' ? 'label label-success' : 'label label-danger'">
+        {{element.isExpired}}
+    </span>
+</ng-template>
+
+<ng-template #templateAction let-element="element">
+    <div class="action__btn">
+        <a class="btn btn-warning btn-xs" 
+                (click)="editBulletin(element)">編輯</a>
+        <a class="btn btn-danger btn-xs" 
+                (click)="deleteBulletin(element)">刪除</a>
+    </div>
+</ng-template>

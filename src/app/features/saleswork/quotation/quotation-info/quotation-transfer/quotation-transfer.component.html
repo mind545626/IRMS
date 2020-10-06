@@ -1,0 +1,151 @@
+<div class="quo-transfer-container">
+  <form class="form-horizontal">
+    <div class="transfer-info-contanier">
+      <div class="sub-title">
+        <i class="fa fa-file-text fa-size-md"></i>
+        <h3>交件基本資料</h3>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="QuotDate">交件方式</label>
+        <div class="col-sm-3">
+          <select type="text" class="form-control" id="ValidDays">
+            <option>請選擇</option>
+            <option>E-mail</option>
+            <option>Fax</option>
+            <option>送件</option>
+            <option>郵寄</option>
+            <option>親自取件</option>
+          </select>
+        </div>
+        <label class="control-label col-sm-1" for="ValidDays">文件用途</label>
+        <div class="col-sm-3">
+          <select type="text" class="form-control" id="ValidDays">
+            <option>請選擇</option>
+            <option>test01</option>
+            <option>test02</option>
+            <option>test03</option>
+          </select>
+        </div>
+        <label class="control-label col-sm-1" for="QuotDate">譯文語法</label>
+        <div class="col-sm-3">
+          <select type="text" class="form-control" id="ValidDays">
+            <option>請選擇</option>
+            <option>test01</option>
+            <option>test02</option>
+            <option>test03</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="ValidDays">文件檔案</label>
+        <div class="col-sm-3">
+          <select type="text" class="form-control" id="ValidDays">
+            <option>請選擇</option>
+            <option>test01</option>
+            <option>test02</option>
+            <option>test03</option>
+          </select>
+        </div>
+        <label class="control-label col-sm-1" for="ValidDays">交件用紙</label>
+        <div class="col-sm-3">
+          <select type="text" class="form-control" id="ValidDays">
+            <option>請選擇</option>
+            <option>test01</option>
+            <option>test02</option>
+            <option>test03</option>
+          </select>
+        </div>
+        <label class="control-label col-sm-1" for="QuotDate">發出需求通報</label>
+        <div class="col-sm-3">
+          <select type="text" class="form-control" id="ValidDays">
+            <option>請選擇</option>
+            <option>有</option>
+            <option>無</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="QuotDate">文件參考網址</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" name="" id="" placeholder="請輸入文件參考網址">
+        </div>
+      </div>
+    </div>
+    <div class="tranfer-detail-container">
+      <div class="sub-title">
+        <i class="fa fa-calendar fa-size-md"></i>
+        <h3>交件日期設定</h3>
+      </div>
+      <div class="btn-container">
+        <button type="button" class="btn btn-success btn-margin-right" (click)="pop_show();" ><i class="fa  fa-pencil"></i>交件日期設定</button>
+      </div>
+      <ag-grid-angular style="width: 100%; height: 400px;" class="ag-theme-alpine" [rowData]="rowData"
+        [rowDragManaged]="true" [columnDefs]="columnDefs" [rowSelection]="rowSelection" [defaultColDef]="defaultColDef"
+        (firstDataRendered)="onFirstDataRendered($event)" (gridReady)="onGridReady($event)">
+      </ag-grid-angular>
+      <div class="btn-container">
+        <button type="button" class="btn  btn-primary btn-lg"><i class="fa fa-share-square-o"></i>拋轉交易單</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- pop視窗 -->
+<div class="pop-wrapper">
+  <form class="form-horizontal">
+    <div class="form-group sub-title-container">
+      <div class="sub-title">
+        <i class="fa  fa-calendar fa-size-md"></i>
+        <h3>交件日期設定</h3>
+      </div>
+      <div>
+        <i class="fa  fa-times fa-size-md" (click)="pop_hide();"></i>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Liaison">Assigner</label>
+      <div class="col-sm-10">
+        <select type="text" class="form-control" id="Liaison">
+          <option selected>請選擇assigner</option>
+          <option>Allen</option>
+          <option>Bob</option>
+          <option>Cara</option>
+          <option>Debby</option>
+          <option>Evan</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="LanguageF">Assigner交件日期</label>
+      <div class="col-sm-10">
+        <mat-form-field>
+          <mat-label>選擇Assigner交件日期</mat-label>
+        <!-- #docregion toggle -->
+          <input matInput [matDatepicker]="picker1">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        <!-- #enddocregion toggle -->
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="LanguageF">Sales交件日期</label>
+      <div class="col-sm-10">
+        <mat-form-field>
+          <mat-label>選擇Sales交件日期</mat-label>
+        <!-- #docregion toggle -->
+          <input matInput [matDatepicker]="picker11">
+          <mat-datepicker-toggle matSuffix [for]="picker11"></mat-datepicker-toggle>
+          <mat-datepicker #picker11></mat-datepicker>
+        <!-- #enddocregion toggle -->
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-group">
+      <div>
+        <button type="button" class="btn btn-success btn-margin-right"><i class="fa  fa-check"></i>儲存設定</button>
+        <button type="button" class="btn btn-danger btn-margin-right"><i class="fa  fa-times"></i>取消設定</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,126 @@
+<div id="modify_detail" class="pop-wrapper">
+  <form class="form-horizontal">
+    <div class="form-group sub-title-container">
+      <div class="sub-title col-sm-6">
+        <i class="fa   fa-edit fa-size-md"></i>
+        <h3>修改明細</h3>
+      </div>
+      <div class="col-sm-6 text-right">
+        <i class="fa  fa-times  fa-size-md" (click)="close_detail()"></i>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">明細<br>名稱</label>
+      <div class="col-sm-11">
+        <input class="form-control" type="text" placeholder="請輸入文件名稱">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">服務別</label>
+      <div class="col-sm-5">
+        <select type="text" class="form-control" id="LiaisonStopMark">
+          <option selected>請選擇</option>
+          <option>test1</option>
+          <option>test2</option>
+          <option>test3</option>
+        </select>
+      </div>
+      <label class="control-label col-sm-1" for="Liaison">服務<br>說明</label>
+      <div class="col-sm-5">
+        <select type="text" class="form-control" id="LiaisonStopMark">
+          <option selected>請選擇</option>
+          <option>test1</option>
+          <option>test2</option>
+          <option>test3</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">原文</label>
+      <div class="col-sm-5">
+        <select type="text" class="form-control" id="LiaisonStopMark">
+          <option selected>請選擇</option>
+          <option>test1</option>
+          <option>test2</option>
+          <option>test3</option>
+        </select>
+      </div>
+      <label class="control-label col-sm-1" for="Liaison">譯文</label>
+      <div class="col-sm-5">
+        <select type="text" class="form-control" id="LiaisonStopMark">
+          <option selected>請選擇</option>
+          <option>test1</option>
+          <option>test2</option>
+          <option>test3</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">類別</label>
+      <div class="col-sm-5">
+        <select type="text" class="form-control" id="LiaisonStopMark">
+          <option selected>請選擇</option>
+          <option>test1</option>
+          <option>test2</option>
+          <option>test3</option>
+        </select>
+      </div>
+      <label class="control-label col-sm-1" for="Liaison">型別</label>
+      <div class="col-sm-5">
+        <select type="text" class="form-control" id="LiaisonStopMark">
+          <option selected>請選擇</option>
+          <option>test1</option>
+          <option>test2</option>
+          <option>test3</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">數量</label>
+      <div class="col-sm-5">
+        <input class="form-control" type="text" placeholder="請輸入數量">
+      </div>
+      <label class="control-label col-sm-1" for="Liaison">單位</label>
+      <div class="col-sm-5">
+        <select type="text" class="form-control" id="LiaisonStopMark">
+          <option selected>請選擇</option>
+          <option>test1</option>
+          <option>test2</option>
+          <option>test3</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">單價</label>
+      <div class="col-sm-5">
+        <input class="form-control" type="text">
+      </div>
+      <label class="control-label col-sm-1" for="Liaison" >小計</label>
+      <div class="col-sm-5">
+        <input class="form-control" disabled="disabled" type="text">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">外幣<br>單價</label>
+      <div class="col-sm-5">
+        <input class="form-control" type="text">
+      </div>
+      <label class="control-label col-sm-1" for="Liaison">外幣<br>小計</label>
+      <div class="col-sm-5">
+        <input class="form-control" type="text">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">明細<br>備註</label>
+      <div class="col-sm-11">
+        <textarea class="form-control" rows="5"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="btn-container">
+        <button type="button" class="btn btn-success btn-margin-right"><i class="fa  fa-check"></i>確認修改</button>
+        <button type="button" class="btn btn-danger btn-margin-right" (click)="close_detail()"><i class="fa  fa-times"></i>取消修改</button>
+      </div>
+    </div>
+  </form>
+</div>

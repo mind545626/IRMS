@@ -1,0 +1,55 @@
+form{
+    padding: 20px;
+}
+.bottom-container{
+    display: flex;
+    .bottom-content{
+        width: 50%;
+    }
+}
+.title{
+    display: flex;
+    align-items: center;
+    height: 34px;
+    color: #fff;
+    background-color: #8DB6B2;
+}
+.pop-wrapper{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #bbb;
+}
+#add_payment{
+    display: none;
+}
+.sub-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(10, 104, 18);
+}
+.sub-title-container{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.fa{
+    margin-right: 10px;
+    &-times{
+        cursor: pointer;
+        &:hover{
+            opacity: .8;
+        }
+    }
+}
+.btn-container{
+   margin-bottom: 10px;
+   text-align: right;
+}
+

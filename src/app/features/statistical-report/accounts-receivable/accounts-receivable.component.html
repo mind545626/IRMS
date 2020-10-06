@@ -1,0 +1,101 @@
+<!-- MAIN CONTENT -->
+<div id="content">
+
+  <div class="row">
+    <sa-big-breadcrumbs [items]="['統計報表', '應收帳款明細統計表']" icon="briefcase" class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+    </sa-big-breadcrumbs>
+  </div>
+  <!-- 查詢條件面板 START -->
+  <div class="condition-container">
+    <div class="title">
+      <i class="fa fa-calculator"></i>
+      <span>應收帳款統計表</span>
+    </div>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="CustomerID">客戶編號</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="CustomerID" placeholder="請輸入客戶編號">
+          </div>  
+          <label class="control-label col-sm-1" for="FullName">客戶名稱</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="FullName" placeholder="請輸入客戶名稱">
+          </div>
+          <label class="control-label col-sm-1" for="OrderNo">交易單文號</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="OrderNo" placeholder="請輸入交易單號">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="SalesRepID">業務代號</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="SalesRepID" placeholder="請輸入業務代號">
+          </div>  
+          <label class="control-label col-sm-1" for="EnglishName">業務人員</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="EnglishName" placeholder="請輸入業務名稱">
+          </div>
+          <label class="control-label col-sm-1" for="GUINo">發票號碼</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="GUINo">
+              <option selected>請選擇</option>
+              <option>有</option>
+              <option>無</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="OrderDate">交易日期</label>
+          <div class="col-sm-3" id="OrderDate">
+            <datepicker-minmax></datepicker-minmax>
+          </div>
+          <label class="control-label col-sm-1" for="BelongRegion">區域</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="BelongRegion">
+              <option selected>全部</option>
+              <option>Taiwan</option>
+              <option>China</option>
+            </select>
+          </div>
+          <label class="control-label col-sm-1" for="CurrencyID">幣別</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="CurrencyID">
+              <option selected>請選擇</option>
+              <option>歐元</option>
+              <option>新台幣</option>
+              <option>人民幣</option>
+              <option>美元</option>
+              <option>韓圜</option>
+              <option>日幣</option>
+              <option>泰銖</option>
+              <option>泰銖</option>
+              <option>印尼盾</option>
+              <option>越南盾</option>
+              <option>新加坡元</option>
+            </select>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button type="button" class="btn btn-success"><i class="fa fa-external-link"></i>輸出Excel</button>
+        <div class="btn-container-right">
+          <button type="button" class="btn btn-primary"><i class="fa fa-search"></i>送出查詢</button>
+          <button type="button" class="btn btn-danger"><i class="fa fa-times"></i>清除查詢</button>
+        </div>  
+      </div>
+      </form>
+  </div>
+    <!-- 查詢條件面板END -->
+    <ag-grid-angular
+    style="width: 100%; height: 400px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [rowSelection]="rowSelection"
+    [rowMultiSelectWithClick]="ture"
+    [defaultColDef]="defaultColDef"
+    (firstDataRendered)="onFirstDataRendered($event)"
+    (gridReady)="onGridReady($event)"
+    >
+    </ag-grid-angular> 
+</div>
+  

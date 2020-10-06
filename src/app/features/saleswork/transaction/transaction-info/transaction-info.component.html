@@ -1,0 +1,444 @@
+<!-- MAIN CONTENT -->
+<div id="content">
+  <div class="row">
+    <sa-big-breadcrumbs [items]="['業務作業', '交易單維護','交易單資料']" icon="briefcase" class="col-sm-6 col-md-6 col-lg-6 align-middle">
+    </sa-big-breadcrumbs>
+    <div class="col-sm-6 col-md-6 col-lg-6 back-btn text-right">
+      <button type="button" class="btn  btn-success btn-margin-right"><i class="fa fa-save"></i>儲存修改</button>
+      <a href="#/saleswork/quotation"><button type="button" class="btn btn-primary align-middle"><i class="fa  fa-arrow-right"></i>返回交易單維護</button></a>
+    </div>
+  </div>
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="交易單資料">
+      <div class="info-container">
+        <form class="form-horizontal">
+          <section>
+            <div class="sub-title">
+              <i class="fa   fa-user fa-size-md"></i>
+              <h3>交易單基本資料</h3>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="FullName">交易單號</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="FullName" value="WW9000531">
+              </div>
+              <label class="control-label col-sm-1" for="CustomerID">客戶編號</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="CustomerID" value="058561">
+              </div>
+              <label class="control-label col-sm-1" for="QuotID">估價單號</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="QuotID" value="202007211862">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="FullName">客戶名稱</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="FullName" value="本仁元股份有限公司">
+              </div>
+              <label class="control-label col-sm-1" for="CustomerTel">客戶電話</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="CustomerTel" value="02-23719823">
+              </div>
+              <label class="control-label col-sm-1" for="FaxNO">客戶傳真</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="FaxNO" placeholder="請輸入客戶傳真號碼">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="CompTaxNo">統一編號</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" disabled="disabled">
+                  <option selected>78212461</option>
+                  <option></option>
+                </select>
+              </div>
+              <label class="control-label col-sm-1" for="CompTaxNoRemarks">統一編號備註</label>
+              <div class="col-sm-7">          
+                <input type="text" class="form-control" id="CompTaxNoRemarks" placeholder="請輸入統一編號備註">
+              </div>
+            </div>            
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="TIN">稅籍編號(海外)</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="TIN" disabled="disabled">
+                </select>          
+              </div>
+              <label class="control-label col-sm-1" for="TINRemarks">稅籍編號(海外)備註</label>
+              <div class="col-sm-7">          
+                <input type="text" class="form-control" id="TINRemarks" placeholder="請輸入稅籍編號(海外)備註">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="TIN">聯絡人</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="TIN" disabled="disabled">
+                  <option selected>李大木</option>
+                </select>          
+              </div>
+              <label class="control-label col-sm-1" for="CellPhone">行動電話</label>
+              <div class="col-sm-3">          
+                <input type="text" class="form-control" id="CellPhone" placeholder="請輸入行動電話">
+              </div>
+              <label class="control-label col-sm-1" for="TINRemarks">電子郵件</label>
+              <div class="col-sm-3">          
+                <input type="text" class="form-control" id="TINRemarks" placeholder="請輸入電子郵件">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="Memo">聯絡人備註<br>(翻譯師看得到)</label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="Memo" id="Memo"  rows="5"></textarea>
+              </div>
+              <label class="col-sm-3"></label>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1"><span class="must-icon">*</span>客戶地址</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" name="CustomerAddress" (change)="myVar2 = !myVar2" disabled="disabled">
+                  <option>國內</option>
+                  <option>國外</option>
+                </select> 
+              </div>
+            </div>
+            <div class="form-group" *ngIf="!myVar2">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2">
+                <select type="text" class="form-control" id="aaa" disabled="disabled">
+                  <option>苗栗縣</option>
+                </select> 
+              </div>
+              <div class="col-sm-2">
+                <select type="text" class="form-control" id="InvoiceDate" disabled="disabled">
+                  <option selected>大湖鄉</option>>
+                </select> 
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="Tel" placeholder="郵遞區號" disabled="disabled" value="748">
+              </div>
+              <div class="col-sm-2">
+                <select type="text" class="form-control" id="InvoiceDate" disabled="disabled">
+                  <option selected>新五街</option>>
+                </select>
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="Tel" placeholder="請輸入地址" disabled="disabled" value="212巷469弄193號21樓">
+              </div>
+            </div>
+            <div class="form-group" *ngIf="myVar2">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-11">
+                <input type="text" class="form-control" id="Tel" placeholder="請輸入國外客戶完整地址">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1"><span class="must-icon">*</span>發票地址</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" name="CustomerAddress" (change)="myVar3 = !myVar3"disabled="disabled">
+                  <option>國內</option>
+                  <option>國外</option>
+                </select> 
+              </div>
+            </div>
+            <div class="form-group" *ngIf="!myVar3">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">
+                  <select type="text" class="form-control" id="aaa" disabled="disabled">
+                    <option>苗栗縣</option>
+                  </select> 
+                </div>
+                <div class="col-sm-2">
+                  <select type="text" class="form-control" id="InvoiceDate" disabled="disabled">
+                    <option selected>大湖鄉</option>>
+                  </select> 
+                </div>
+                <div class="col-sm-1">
+                  <input type="text" class="form-control" id="Tel" placeholder="郵遞區號" disabled="disabled" value="748">
+                </div>
+                <div class="col-sm-2">
+                  <select type="text" class="form-control" id="InvoiceDate" disabled="disabled">
+                    <option selected>新五街</option>>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="Tel" placeholder="請輸入地址" disabled="disabled" value="212巷469弄193號21樓">
+                </div>
+            </div>
+            <div class="form-group" *ngIf="myVar3">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-11">
+                <input type="text" class="form-control" id="Tel" placeholder="請輸入國外客戶完整地址" disabled="disabled">
+              </div>
+            </div>
+          </section>
+          <section class="section-middle">
+            <div class="sub-title">
+              <i class="fa fa-money fa-size-md"></i>
+              <h3>客戶帳款資料</h3>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="InvoiceDate">發票日</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="InvoiceDate" disabled="disabled">
+                  <option selected>20</option>
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                  <option>04</option>
+                </select> 
+              </div>
+              <label class="control-label col-sm-1" for="ReqDay">請款日</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="ReqDay" disabled="disabled">
+                  <option selected>05</option>
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                  <option>04</option>
+                </select> 
+              </div>
+              <label class="control-label col-sm-1" for="MonthPayDay">月結天數</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="MonthPayDay" disabled="disabled">
+                  <option selected>30</option>
+                  <option>45</option>
+                  <option>60</option>
+                  <option>90</option>
+                  <option>120以上</option>
+                </select> 
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="PayMethod">付款方式</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="PayMethod" disabled="disabled">
+                  <option>郵局劃撥</option>
+                  <option selected>電匯</option>
+                  <option>郵寄支票</option>
+                  <option>刷卡</option>
+                  <option>現金</option>
+                  <option>PayPal</option>
+                </select> 
+              </div>
+              <label class="control-label col-sm-1" for="MonthPayDay">銷帳日期</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="MonthPayDay" disabled="disabled">
+                  <option selected>30</option>
+                  <option>45</option>
+                  <option>60</option>
+                  <option>90</option>
+                  <option>120以上</option>
+                </select> 
+              </div>
+            </div>
+          </section>
+          <section class="section-bottom">
+            <div class="sub-title">
+              <i class="fa fa-gavel fa-size-md"></i>
+              <h3>估價資料</h3>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="CurrencyID">估價幣別</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="CurrencyID" disabled="disabled">
+                  <option>新台幣</option>
+                  <option>美元</option>
+                  <option>日幣</option>
+                </select>          
+              </div>
+              <label class="control-label col-sm-1" for="ExchangeRate">估價匯率</label>
+              <div class="col-sm-3">          
+                <input type="text" class="form-control" id="ExchangeRate" disabled="disabled">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="Company">交易主體公司名稱</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="Company" disabled="disabled">
+                  <option>統一翻譯社</option>
+                </select>          
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="TaxRates">稅率</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="TaxRates" disabled="disabled">
+                  <option></option>
+                  <option></option>
+                </select>          
+              </div>
+              <label class="control-label col-sm-1" for="InvoiceType">發票開立方式</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="InvoiceType">
+                  <option>請選擇</option>
+                  <option></option>
+                </select>          
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="QuotDate">交易日期</label>
+              <div class="col-sm-3">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="quodate_2" [formControl]="Date1" disabled="disabled">
+                  <mat-datepicker-toggle matSuffix [for]="quodate_2" disabled="disabled"></mat-datepicker-toggle>
+                  <mat-datepicker #quodate_2></mat-datepicker>
+                </mat-form-field>              
+              </div>
+              <label class="control-label col-sm-1" for="ValidDays">估價單有效天數</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="ValidDays">
+                  <option>請選擇</option>
+                  <option>30天</option>
+                  <option>60天</option>
+                  <option>90天</option>
+                </select>          
+              </div>
+              <label class="control-label col-sm-1" for="OutsideCustomerNo">客戶案件編號</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="OutsideCustomerNo" placeholder="請輸入客戶案件編號">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="CurrencyMemo">其他建議幣別</label>
+              <label class="control-label text-left suggest-curr" id="CurrencyMemo">THB / PTS Group IntematronaJ (HK) Company Limited!營業稅 0% / HK Invoice<br>
+                USD / PRESIDENT TRANSLATION SERVICE GROUP INTERNATIONAL LIMITED / 營業稅 0% / Invoice<br>
+                USD / PTS Group International (HK) Company Limited / 營業稅 0% / HK Invoice<br>
+                USD / PTS Group International Co" Ltd / 營業稅 0% / Invoice<br></label>
+            </div>
+          </section>
+          <section class="section-bottom">
+            <div class="sub-title">
+              <i class="fa fa-edit "></i>
+              <h3>其他備註說明</h3>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="SecrecyMemo">Sales對Assigner備註<br><span class="tips">(客戶/翻譯師看不到)</span></label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="SecrecyMemo" id="SecrecyMemo"  rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="WorkMemo">Sales對翻譯師備註<br><span class="tips">(客戶看不到)</span></label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="WorkMemo" id="WorkMemo"  rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1"  for="SalesMemo">Sales交件備註<br><span class="tips">(客戶/翻譯師/Assigner看不到)</span></label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="SalesMemo" id="SalesMemo"  rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="InterpretationDesc">案件說明</label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="InterpretationDesc" id="InterpretationDesc"  rows="5"></textarea>
+              </div>
+            </div>
+          </section>
+          <section class="section-bottom">
+            <div class="sub-title">
+              <i class="fa fa-file-text fa-size-md"></i>
+              <h3>交件基本資料</h3>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="QuotDate">交件方式</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="ValidDays" disabled="disabled">
+                  <option selected>E-mail</option>
+                  <option>Fax</option>
+                  <option>送件</option>
+                  <option>郵寄</option>
+                  <option>親自取件</option>
+                </select>
+              </div>
+              <label class="control-label col-sm-1" for="ValidDays">文件用途</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="ValidDays" disabled="disabled">
+                  <option selected>產品型錄</option>
+                  <option>test01</option>
+                  <option>test02</option>
+                  <option>test03</option>
+                </select>
+              </div>
+              <label class="control-label col-sm-1" for="QuotDate">譯文語法</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="ValidDays" disabled="disabled">
+                  <option selected>忠於原文</option>
+                  <option>test01</option>
+                  <option>test02</option>
+                  <option>test03</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="ValidDays">文件檔案</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="ValidDays" disabled="disabled">
+                  <option >Word</option>
+                  <option>test01</option>
+                  <option>test02</option>
+                  <option>test03</option>
+                </select>
+              </div>
+              <label class="control-label col-sm-1" for="ValidDays">交件用紙</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="ValidDays" disabled="disabled">
+                  <option selected>白紙</option>
+                  <option>test01</option>
+                  <option>test02</option>
+                  <option>test03</option>
+                </select>
+              </div>
+              <label class="control-label col-sm-1" for="QuotDate">發出需求通報</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="ValidDays" disabled="disabled">
+                  <option>有</option>
+                  <option  selected>無</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="QuotDate">文件參考網址</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" name="" id="" placeholder="請輸入文件參考網址" disabled="disabled">
+              </div>
+            </div>
+          </section>
+        </form>
+      </div>    
+    </mat-tab>
+    <!-- 聯絡人資料頁籤內容 -->
+    <mat-tab label="交易單明細（10)">
+      <transaction-detail></transaction-detail>
+    </mat-tab>
+    <mat-tab label="預覽列印">
+      <div class="preview-container">
+        <div class="sub-title">
+          <i class="fa fa-file-text fa-size-md"></i>
+          <h3>交易單Invoice</h3>
+        </div>
+        <ul class="preview-list">
+          <li><a>繁中交易單</a></li>
+          <li><a>簡中交易單</a></li>
+          <li><a>President Translation(TW) Invoice / 台灣永豐銀行</a></li>
+          <li><a>PTS Group (Samoa) Invoice /香港上海銀行</a></li>
+          <li><a>PTS Group (Samoa) Invoice /日本樂天銀行</a></li>
+          <li><a>PTS Group (HK) Invoice /香港匯豐銀行</a></li>
+        </ul>
+      </div>
+    </mat-tab>
+    <mat-tab label="翻譯需求">
+      <quotation-request></quotation-request>
+    </mat-tab>
+    <mat-tab label="評價表(2)">
+      <tr-review></tr-review>
+     </mat-tab>
+    <mat-tab label="業務銷款報告書">
+      <write-off></write-off>
+    </mat-tab>
+    <mat-tab label="開立電子發票">
+     <transaction-invoice></transaction-invoice>
+    </mat-tab>
+  </mat-tab-group>
+ 

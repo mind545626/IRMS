@@ -1,0 +1,109 @@
+<h1 class="form__title" mat-dialog-title>下載影像申請表單</h1>
+
+<form [formGroup]='applyForm' (ngSubmit)="onSubmit()">
+
+    <mat-form-field class="half-width">
+        <mat-label>表單編號</mat-label>
+        <input matInput formControlName="formNumber" [value]="apply.formNumber">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+        <mat-label>申請人單位</mat-label>
+        <input matInput formControlName="userUnit">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+        <mat-label>申請人</mat-label>
+        <input matInput formControlName="user">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+        <mat-label>申請時間</mat-label>
+        <input matInput [value]="apply.applyDate">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+        <mat-label>調閱案由</mat-label>
+        <mat-select formControlName="applyCase">
+            <mat-option *ngFor="let item of apply.applyCase" [value]="item">
+                {{ item }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+        <mat-label>調閱攝影機名稱</mat-label>
+        <input matInput formControlName="cctvName">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+        <mat-label>影像名稱</mat-label>
+        <input matInput formControlName="videoName">
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+        <mat-label>偵辦進度</mat-label>
+        <mat-select formControlName="caseSituation">
+            <mat-option *ngFor="let item of apply.caseSituation" [value]="item">
+                {{ item }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+        <mat-label>輸出格式</mat-label>
+        <mat-select formControlName="output">
+            <mat-option *ngFor="let item of apply.output" [value]="item">
+                {{ item }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="half-width">
+        <mat-label>批核人</mat-label>
+        <mat-select formControlName="formReviewer">
+            <mat-option *ngFor="let item of apply.formReviewer" [value]="item">
+                {{ item }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+    <div formGroupName="other">
+        <p>其他機關單位調閱申請</p>
+        <mat-form-field class="half-width">
+            <mat-label>服務單位</mat-label>
+            <input matInput type="text" formControlName="otherUnit">
+        </mat-form-field>
+        <mat-form-field class="half-width">
+            <mat-label>職稱</mat-label>
+            <input matInput type="text" formControlName="otherTitlte">
+        </mat-form-field>
+        <mat-form-field class="half-width">
+            <mat-label>姓名</mat-label>
+            <input matInput type="text" formControlName="otherName">
+        </mat-form-field>
+        <mat-form-field class="half-width">
+            <mat-label>連絡電話</mat-label>
+            <input matInput type="text" formControlName="otherPhone">
+        </mat-form-field>
+        <mat-form-field class="half-width">
+            <mat-label>申請公文號</mat-label>
+            <input matInput type="text" formControlName="otherDocument">
+        </mat-form-field>
+    </div>
+
+
+    <div mat-dialog-actions class="form__action">
+        <button mat-flat-button color="primary" [disabled]="!applyForm.valid" (click)="onNoClick()">送出申請</button>
+        <button mat-flat-button color="warn" (click)="onNoClick()">取消重選</button>
+    </div>
+
+    <!-- <p>
+            Form value: {{applyForm.value | json}}
+        </p>
+        <p>
+            Form Status: {{ applyForm.status }}
+        </p> -->
+
+</form>

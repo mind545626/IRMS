@@ -1,0 +1,74 @@
+<div class="panel-body">
+    <div class="col-xs-12" *ngFor="let item of obs | async">
+        <div>
+            <p>攝影機名稱：{{item.name}}</p>
+            <p>攝影機編號：{{item.camid}}</p>
+        </div>
+
+        <div>
+            <!-- MAT-VIDEO 寫法 -->
+            <!-- <mat-video title="{{item.name}}" [autoplay]="true" [preload]="true" [fullscreen]="true" [download]="true"
+                [muted]="true" color="accent" spinner="spin"
+                src="http://220.228.148.247:10000/video.cgi?profilename=Profile4">
+            </mat-video>
+
+            <div class="video__btn">
+                <button mat-flat-button class="bg-color-blueLight txt-color-white" type="button" (click)="onPlay()">
+                    <mat-icon>play_arrow</mat-icon>播放
+                </button>
+                <button mat-flat-button class="bg-color-blueLight txt-color-white" type="button" (click)="onPause()">
+                    <mat-icon>pause</mat-icon>暫停
+                </button>
+                <button mat-flat-button class="bg-color-blueLight txt-color-white" (click)="restart()">
+                    <mat-icon>replay</mat-icon>重新開始
+                </button>
+                <button mat-flat-button class="bg-color-blueLight txt-color-white" (click)="skip(-10)">
+                    <mat-icon>replay_10</mat-icon>倒轉10秒
+                </button>
+                <button mat-flat-button class="bg-color-blueLight txt-color-white" (click)="skip(10)">
+                    <mat-icon>forward_10</mat-icon>快轉10秒
+                </button>
+            </div> -->
+
+            <!-- 一般寫法 -->
+            <!-- <figure #videoContainerEl class="video__container">
+                <video width="90%" height="80%" #videoEl
+                    src="http://220.228.148.247:10000/video.cgi?profilename=Profile4"></video>
+                <div class="video__btn">
+                    <button mat-flat-button class="bg-color-blueLight txt-color-white" type="button" (click)="onPlay()">
+                        <mat-icon>play_arrow</mat-icon>播放
+                    </button>
+                    <button mat-flat-button class="bg-color-blueLight txt-color-white" type="button" (click)="onPause()">
+                        <mat-icon>pause</mat-icon>暫停
+                    </button>
+                    <button mat-flat-button class="bg-color-blueLight txt-color-white" (click)="restart()">
+                        <mat-icon>replay</mat-icon>重新開始
+                    </button>
+                    <button mat-flat-button class="bg-color-blueLight txt-color-white" (click)="skip(-10)">
+                        <mat-icon>replay_10</mat-icon>倒轉10秒
+                    </button>
+                    <button mat-flat-button class="bg-color-blueLight txt-color-white" (click)="skip(10)">
+                        <mat-icon>forward_10</mat-icon>快轉10秒
+                    </button>
+                </div>
+            </figure> -->
+
+            <!-- IMG 寫法 -->
+            <img src="http://220.228.148.247:10000/video.cgi?profilename=Profile4" class="cctv" frameborder="0"
+                width="90%" height="80%" scrolling="no" />
+            <div class="btn__video">
+                <button mat-flat-button class="bg-color-blueLight small txt-color-white" type="button" (click)="onPlay()">
+                    <mat-icon>play_arrow</mat-icon><span>播放</span>
+                </button>
+                <button mat-flat-button class="bg-color-blueLight small txt-color-white" type="button" (click)="onPause()">
+                    <mat-icon>pause</mat-icon>暫停
+                </button>
+
+            </div>
+            <!-- <img src="http://113.196.103.28:7001/media/{{item.camid}}.mp4?resolution=640x480" class="cctv" frameborder="0" width="90%" height="80%"
+                scrolling="no" /> -->
+        </div>
+    </div>
+</div>
+
+<mat-paginator #paginator="matPaginator" [pageSizeOptions]="paginationPageSizes"></mat-paginator>

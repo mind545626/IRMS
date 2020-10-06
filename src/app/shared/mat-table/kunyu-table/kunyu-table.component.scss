@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 70%;
+}
+
+.normal {
+    width: 4rem;
+    color: white;
+    background-color: #4aa047;
+    text-align: center;
+    height: 2.2rem;
+    border-radius: 5px;
+}
+
+.abnormal {
+    width: 4rem;
+    color: white;
+    background-color: #d32f2f;
+    text-align: center;
+    height: 2.2rem;
+    border-radius: 5px;
+}
+
+.mat-header-cell,
+.mat-cell {
+    min-width: 5rem;
+    max-width: auto;
+}
+

@@ -1,0 +1,352 @@
+<!-- MAIN CONTENT -->
+<div id="content">
+  <div class="row">
+    <sa-big-breadcrumbs [items]="['業務作業', '估價單維護','估價單資料']" icon="briefcase" class="col-sm-6 col-md-6 col-lg-6 align-middle">
+    </sa-big-breadcrumbs>
+    <div class="col-sm-6 col-md-6 col-lg-6 back-btn text-right">
+      <button type="button" class="btn  btn-success btn-margin-right"><i class="fa fa-save"></i>儲存修改</button>
+      <button type="button" class="btn btn-warning align-middle btn-margin-right"><i class="fa  fa-copy"></i>複製估價單</button>
+      <a href="#/saleswork/quotation"><button type="button" class="btn btn-primary align-middle"><i class="fa  fa-arrow-right"></i>返回估價單維護</button></a>
+    </div>
+  </div>
+  <mat-tab-group mat-align-tabs="start">
+    <!-- 估價單基本資料內容 -->
+    <mat-tab label="估價單資料">
+      <div class="info-container">
+        <form class="form-horizontal">
+          <section>
+            <div class="sub-title">
+              <i class="fa   fa-user fa-size-md"></i>
+              <h3>客戶基本資料</h3>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="CustomerID">客戶編號</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="CustomerID" placeholder="請輸入客戶編號">
+              </div>
+              <label class="control-label col-sm-1" for="FullName">客戶名稱</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="FullName" placeholder="請輸入客戶名稱">
+              </div>
+              <label class="control-label col-sm-1" for="QuotID">估價單號</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="QuotID" placeholder="請輸入估價單號">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="CustomerTel">客戶電話</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="CustomerTel" placeholder="請輸入客戶電話">
+              </div>
+              <label class="control-label col-sm-1" for="FaxNO">客戶傳真</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="FaxNO" placeholder="請輸入客戶傳真號碼">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="CompTaxNo">統一編號</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="CompTaxNo">
+                  <option>請選擇</option>
+                  <option></option>
+                </select>
+              </div>
+              <label class="control-label col-sm-1" for="CompTaxNoRemarks">統一編號備註</label>
+              <div class="col-sm-7">          
+                <input type="text" class="form-control" id="CompTaxNoRemarks" placeholder="請輸入統一編號備註">
+              </div>
+            </div>            
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="TIN">稅籍編號(海外)</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="TIN">
+                  <option>請選擇</option>
+                  <option></option>
+                </select>          
+              </div>
+              <label class="control-label col-sm-1" for="TINRemarks">稅籍編號(海外)備註</label>
+              <div class="col-sm-7">          
+                <input type="text" class="form-control" id="TINRemarks" placeholder="請輸入稅籍編號(海外)備註">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="TIN">聯絡人</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="TIN">
+                  <option>請選擇</option>
+                  <option></option>
+                </select>          
+              </div>
+              <label class="control-label col-sm-1" for="CellPhone">行動電話</label>
+              <div class="col-sm-3">          
+                <input type="text" class="form-control" id="CellPhone" placeholder="請輸入行動電話">
+              </div>
+              <label class="control-label col-sm-1" for="TINRemarks">電子郵件</label>
+              <div class="col-sm-3">          
+                <input type="text" class="form-control" id="TINRemarks" placeholder="請輸入電子郵件">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="Memo">聯絡人備註<br>(翻譯師看得到)</label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="Memo" id="Memo"  rows="5"></textarea>
+              </div>
+              <label class="col-sm-3"></label>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1"><span class="must-icon">*</span>客戶地址</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" name="CustomerAddress" (change)="myVar2 = !myVar2">
+                  <option>國內</option>
+                  <option>國外</option>
+                </select> 
+              </div>
+            </div>
+            <div class="form-group" *ngIf="!myVar2">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2">
+                <select type="text" class="form-control" id="aaa">
+                  <option selected>請選擇縣/市</option>>
+                  <option>台北市</option>>
+                  <option>新北市</option>
+                  <option>桃園市</option>
+                  <option>新竹市</option>
+                  <option>苗栗縣</option>
+                </select> 
+              </div>
+              <div class="col-sm-2">
+                <select type="text" class="form-control" id="InvoiceDate">
+                  <option selected>請選擇市/區/鄉/鎮</option>>
+                </select> 
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="Tel" placeholder="郵遞區號">
+              </div>
+              <div class="col-sm-2">
+                <select type="text" class="form-control" id="InvoiceDate">
+                  <option selected>請選擇街/路/段</option>>
+                </select>
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="Tel" placeholder="請輸入地址">
+              </div>
+            </div>
+            <div class="form-group" *ngIf="myVar2">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-11">
+                <input type="text" class="form-control" id="Tel" placeholder="請輸入國外客戶完整地址">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1"><span class="must-icon">*</span>發票地址</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" name="CustomerAddress" (change)="myVar3 = !myVar3">
+                  <option>國內</option>
+                  <option>國外</option>
+                </select> 
+              </div>
+            </div>
+            <div class="form-group" *ngIf="!myVar3">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2">
+                <select type="text" class="form-control" id="aaa">
+                  <option selected>請選擇縣/市</option>>
+                  <option>台北市</option>>
+                  <option>新北市</option>
+                  <option>桃園市</option>
+                  <option>新竹市</option>
+                  <option>苗栗縣</option>
+                </select> 
+              </div>
+              <div class="col-sm-2">
+                <select type="text" class="form-control" id="InvoiceDate">
+                  <option selected>請選擇市/區/鄉/鎮</option>>
+                </select> 
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="Tel" placeholder="郵遞區號">
+              </div>
+              <div class="col-sm-2">
+                <select type="text" class="form-control" id="InvoiceDate">
+                  <option selected>請選擇街/路/段</option>>
+                </select>
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="Tel" placeholder="請輸入地址">
+              </div>
+            </div>
+            <div class="form-group" *ngIf="myVar3">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-11">
+                <input type="text" class="form-control" id="Tel" placeholder="請輸入國外客戶完整地址">
+              </div>
+            </div>
+          </section>
+          <section class="section-middle">
+            <div class="sub-title">
+              <i class="fa fa-gavel fa-size-md"></i>
+              <h3>估價資料</h3>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="CurrencyID">估價幣別</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="CurrencyID">
+                  <option>新台幣</option>
+                  <option>美元</option>
+                  <option>日幣</option>
+                </select>          
+              </div>
+              <label class="control-label col-sm-1" for="ExchangeRate">估價匯率</label>
+              <div class="col-sm-3">          
+                <input type="text" class="form-control" id="ExchangeRate">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="Company">交易主體公司名稱</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="Company">
+                  <option>請選擇</option>
+                  <option></option>
+                </select>          
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="TaxRates">稅率</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="TaxRates">
+                  <option>請選擇</option>
+                  <option></option>
+                </select>          
+              </div>
+              <label class="control-label col-sm-1" for="InvoiceType">發票開立方式</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="InvoiceType">
+                  <option>請選擇</option>
+                  <option></option>
+                </select>          
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="QuotDate">估價日期</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="QuotDate">
+              </div>
+              <label class="control-label col-sm-1" for="ValidDays">估價單有效天數</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="ValidDays">
+                  <option>請選擇</option>
+                  <option>30天</option>
+                  <option>60天</option>
+                  <option>90天</option>
+                </select>          
+              </div>
+              <label class="control-label col-sm-1" for="OutsideCustomerNo">客戶案件編號</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="OutsideCustomerNo" placeholder="請輸入客戶案件編號">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="CurrencyMemo">其他建議幣別</label>
+              <label class="control-label text-left suggest-curr" id="CurrencyMemo">THB / PTS Group IntematronaJ (HK) Company Limited!營業稅 0% / HK Invoice<br>
+                USD / PRESIDENT TRANSLATION SERVICE GROUP INTERNATIONAL LIMITED / 營業稅 0% / Invoice<br>
+                USD / PTS Group International (HK) Company Limited / 營業稅 0% / HK Invoice<br>
+                USD / PTS Group International Co" Ltd / 營業稅 0% / Invoice<br></label>
+            </div>
+          </section>
+          <section class="section-bottom">
+            <div class="sub-title">
+              <i class="fa fa-edit "></i>
+              <h3>其他備註說明</h3>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="SecrecyMemo">Sales對Assigner備註<br><span class="tips">(客戶/翻譯師看不到)</span></label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="SecrecyMemo" id="SecrecyMemo"  rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="WorkMemo">Sales對翻譯師備註<br><span class="tips">(客戶看不到)</span></label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="WorkMemo" id="WorkMemo"  rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1"  for="SalesMemo">Sales交件備註<br><span class="tips">(客戶/翻譯師/Assigner看不到)</span></label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="SalesMemo" id="SalesMemo"  rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="InterpretationDesc">案件說明</label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="InterpretationDesc" id="InterpretationDesc"  rows="5"></textarea>
+              </div>
+            </div>
+          </section>
+          <section class="section-bottom">
+            <div class="sub-title">
+              <i class="fa fa-list-ul fa-size-md"></i>
+              <h3>未成交資料</h3>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="CustomerNondeal">未成交<br>客戶意見</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="CustomerNondeal">
+                  <option selected>請選擇</option>
+                  <option>01</option>
+                  <option>02</option>
+                </select> 
+              </div>
+              <label class="control-label col-sm-1" for="SalesNondeal">未成交<br>意見說明</label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="SalesNondeal" id="SalesNondeal"  rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-1" for="SalesNondeal">未成交原因</label>
+              <div class="col-sm-3">
+                <select type="text" class="form-control" id="SalesNondeal">
+                  <option selected>請選擇</option>
+                  <option>01</option>
+                  <option>02</option>
+                </select> 
+              </div>
+              <label class="control-label col-sm-1" for="NoDealMemo">未成交<br>原因說明</label>
+              <div class="col-sm-7">
+                <textarea  class="form-control" name="NoDealMemo" id="NoDealMemo"  rows="5"></textarea>
+              </div>
+            </div>
+          </section>
+        </form>
+      </div>    
+    </mat-tab>
+    <!-- 聯絡人資料頁籤內容 -->
+    <mat-tab label="估價單明細">
+      <quotation-detail></quotation-detail>
+    </mat-tab>
+    <mat-tab label="估價單預覽">
+      <div class="preview-container">
+        <ul class="preview-list">
+          <li><a>英文</a></li>
+          <li><a>繁中</a></li>
+          <li><a>簡中</a></li>
+          <li><a>日文</a></li>
+          <li><a>韓文</a></li>
+          <li><a>印尼文</a></li>
+          <li><a>越南文</a></li>
+        </ul>
+      </div>
+    </mat-tab>
+    <mat-tab label="追蹤狀況">
+      <quotation-track></quotation-track>
+    </mat-tab>
+    <mat-tab label="翻譯需求">
+     <quotation-request></quotation-request>
+    </mat-tab>
+    <mat-tab label="試譯審核表">
+    </mat-tab>
+    <mat-tab label="拋轉資訊">
+      <quotation-transfer></quotation-transfer>
+    </mat-tab>
+  </mat-tab-group>
+ 

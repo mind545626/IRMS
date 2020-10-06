@@ -1,0 +1,50 @@
+.container{
+    padding: 20px;
+    width: 100%;
+    min-height: 500px;
+    background-color: #fff;
+}
+.step-container{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.step-title{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 0;
+}
+.sub-title{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.step-content{
+    margin-left: 50px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.step-progress{
+    margin-left: 50px;
+    padding: 0 20px;
+}
+
+.step-num{
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    background-color: #c8c8c8;
+    text-align: center;
+    line-height: 30px;
+}
+.label-txt{
+    margin-left: 10px;
+    font-size: 16px;
+}
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

@@ -1,0 +1,68 @@
+.invoice-container{
+    background-color: #fff;
+    padding: 20px;
+    min-height: 500px;
+}
+
+.btn-container{
+    margin: 0;
+}
+.table-container, table{
+    margin-top: 20px;
+}
+.mat-form-field{
+    width: 100%;
+    max-width: 200px;
+}
+.add-date{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.add-button{
+    margin-left: 10px;
+}
+.add-invoice{
+    padding: 20px;
+    border: 1px solid #ddd
+}
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+}
+.memo{
+    max-width: 200px;
+}
+.pop-wrapper{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #bbb;
+    form{
+        padding: 20px;
+        padding-right: 30px;
+    }
+    .form-group{
+        display: flex;
+        margin-right: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+    .sub-title{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        width: 100%;
+    }
+    .sub-title-container{
+        justify-content: space-between;
+        align-items: center;
+    }
+}

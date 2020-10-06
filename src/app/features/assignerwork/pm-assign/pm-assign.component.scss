@@ -1,0 +1,85 @@
+
+.title{
+    display: flex;
+    align-items: center;
+    height: 34px;
+    color: #fff;
+    background-color: #8DB6B2;
+}
+.fa-group{
+    margin: 0 5px 0 10px;
+}
+.btn-container{
+    text-align: right;
+}
+.btn{
+    width: 100px;
+    &-primary{
+        margin-right: 10px;
+    }
+}
+.result-container{
+    overflow: hidden;
+    padding: 20px;
+
+}
+input[type="text"]{
+    width: 100%;
+}
+.selection{
+    width: 60px;
+}
+.flex{
+    display: inline-flex;
+    align-items: center;
+}
+.function-container{
+    display: inline-flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    border-left: 1px solid #c8c8c8;
+    border-right: 1px solid #c8c8c8;
+}
+.assign-member, .assign-change{
+    display: inline-flex;
+    align-items: center;
+    width: 35%;
+    button{
+        width: 100px;
+        height: 35px;
+    }
+    .sub-title{
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
+.assign-change{
+    margin-left: 80px;
+    width: 40%;
+}
+.fa-long-arrow-right{
+    font-size: 18px;
+}
+.tab-1{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 180px;
+    height: 34px;
+    border-left: 1px solid #c8c8c8;
+    border-top: 1px solid #c8c8c8;
+    span, .fa{
+        color: #000;
+    }
+}
+.tab-2, .tab-3{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 34px;
+    color: #ffff;
+}

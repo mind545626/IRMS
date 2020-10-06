@@ -1,0 +1,143 @@
+<!-- MAIN CONTENT -->
+<div id="content">
+    <div class="row">
+        <sa-big-breadcrumbs [items]="['業務作業', '訂單進度管理']" icon="briefcase" class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        </sa-big-breadcrumbs>
+    </div>
+
+    <!-- 查詢條件面板 START -->
+    <div class="condition-container">
+        <div class="title">
+            <i class="fa fa-tasks"></i>
+            <span>訂單狀態查詢</span>
+        </div>
+        <form class="form-horizontal" [formGroup]="searchForm" (ngSubmit)="searchClick()">
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="CustomerID">估價單編號</label>
+                <div class="col-sm-3">
+                    <input type="text" id="CustomerID" placeholder="請輸入估價單編號"
+                           pInputText>
+                        
+                </div>
+                <label class="control-label col-sm-1" for="FullName">交易單編號</label>
+                <div class="col-sm-3">
+                    <input type="text" placeholder="請輸入交易單編號"
+                           pInputText>
+                </div>
+                <label class="control-label col-sm-1" for="StopMark">訂單狀態</label>
+                <div class="col-sm-3">
+                    <p-dropdown id="StopMark" [options]="orderprogresses" [(ngModel)]="selectedOrderProgress" 
+                    placeholder="請選擇狀態" optionLabel="name" [showClear]="true"></p-dropdown>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="CustomerID">客戶編號</label>
+                <div class="col-sm-3">
+                    <input type="text" id="CustomerID" placeholder="請輸入客戶編號"
+                            pInputText>
+                        
+                </div>
+                <label class="control-label col-sm-1" for="FullName">客戶名稱</label>
+                <div class="col-sm-3">
+                    <input type="text" placeholder="請輸入客戶名稱"
+                           pInputText>
+                </div>
+                <label class="control-label col-sm-1" for="StopMark">聯絡人</label>
+                <div class="col-sm-3">
+                    <input type="text" placeholder="請輸入聯絡人姓名"
+                     pInputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="StopMark">處理業務</label>
+                <div class="col-sm-3">
+                    <input type="text" placeholder="請輸入業務姓名"
+                     pInputText>
+                </div>
+                <label class="control-label col-sm-1" for="CreateDate">交易日期</label>
+                <div class="col-sm-3">
+                    <p-calendar [(ngModel)]="date1" [showIcon]="true" inputId="icon1" placeholder="選擇起始日期"	></p-calendar>
+                </div>
+                <div class="col-sm-3">
+                    <p-calendar [(ngModel)]="date2" [showIcon]="true" inputId="icon2" placeholder="選擇結束日期"></p-calendar>
+                </div>
+            </div>
+            <div class="btn-container">
+                <!-- <div *ngIf="!valid"><b class="text-danger">請至少填寫一個條件</b></div> -->
+                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>送出查詢</button>
+                <button type="reset" class="btn btn-danger"><i class="fa  fa-times"></i>清除查詢</button>
+            </div>
+        </form>
+    </div>
+    <!-- 查詢條件面板 END -->
+
+    <!-- 查詢結果面板 START -->
+    <div class="result-container">
+        <div class="title">
+            <i class="fa fa-tasks"></i>
+            <span>查詢結果</span>
+        </div>
+
+        <!-- PrimeNG Table START -->
+        <p-table #dt [columns]="cols" [value]="orders" [paginator]="true" [scrollable]="true" [rows]="10"
+                 [(selection)]="selectedOrders" [resizableColumns]="true" [style]="{width: '100%'}"
+                 [showCurrentPageReport]="true" 
+                 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+                 [rowsPerPageOptions]="[10,20,30]"
+                 styleClass="p-datatable-customers">
+            <ng-template pTemplate="colgroup" let-columns>
+                <colgroup>
+                    <col *ngFor="let col of columns" [style.width]="col.width">
+                </colgroup>
+            </ng-template>
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th *ngFor="let col of columns">
+                        {{col.header | i18n }}
+                    </th>
+                </tr>
+                <tr>
+                    <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                        <div style="width: 60px" *ngSwitchCase="'select'"></div>
+                        <input *ngSwitchCase="'CustomerID'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <input *ngSwitchCase="'FullName'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <input *ngSwitchCase="'Liaison'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <input *ngSwitchCase="'QuoID'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <input *ngSwitchCase="'OrderNo'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <input *ngSwitchCase="'EnglishName'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <p-calendar *ngSwitchCase="'OrderDate'" (onSelect)="onDateSelect($event)" (onClearClick)="dt.filter('', 'date', 'equals')" [showButtonBar]="true" styleClass="p-column-filter" placeholder="選擇日期" [readonlyInput]="true" dateFormat="yy-mm-dd"></p-calendar>
+                        <p-dropdown *ngSwitchCase="'OrderProgress'" [showClear]="true" [options]="orderprogress"
+                                    (onChange)="dt.filter($event.value, col.field, 'equals')"></p-dropdown>
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns" let-order>
+                <tr>
+                    <td *ngFor="let col of columns" class="ui-resizable-column">
+                    <ng-container *ngIf="col.field == 'CustomerID'">
+                        <a routerLink="/saleswork/customer/customer-info">
+                            {{rowData[col.field]}}
+                        </a>
+                    </ng-container>
+                    <ng-container *ngIf="col.field == 'OrderProgress'">
+                        <button  [class]="'status-' + order.status" >
+                            {{rowData[col.field]}}
+                        </button>
+                    </ng-container>
+                    <ng-container *ngIf="col.field !== 'CustomerID' && col.field !== 'OrderProgress'">
+                        {{rowData[col.field]}}
+                    </ng-container>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+        <!-- PrimeNG Table END -->
+    </div>
+    <!-- 查詢結果面板 END -->
+</div>

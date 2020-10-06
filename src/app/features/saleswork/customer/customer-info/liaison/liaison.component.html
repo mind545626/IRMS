@@ -1,0 +1,57 @@
+<div class="liaison-container">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">聯絡人</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" id="Tel" placeholder="請輸入聯絡人姓名">
+      </div>
+      <label class="control-label col-sm-1" for="Tel">電話</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" id="FullName" placeholder="請輸入聯絡人電話">
+      </div>
+      <label class="control-label col-sm-1" for="LiaisonEmail">電子郵件</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" id="LiaisonEmail" placeholder="請輸入電子郵件">
+      </div>
+      <label class="control-label col-sm-1" for="LiaisonStopMark">聯絡人狀態</label>
+      <div class="col-sm-2">
+        <select type="text" class="form-control" id="LiaisonStopMark">
+          <option selected>全部</option>
+          <option>正常</option>
+          <option>停用</option>
+        </select> 
+      </div>
+    </div>
+    <div class="btn-container btn-right">
+      <button type="button" class="btn btn-primary btn-margin-right"><i class="fa fa-search"></i>送出查詢</button>
+      <button type="button" class="btn btn-danger"><i class="fa  fa-times"></i>清除查詢</button>
+    </div>
+  </form>
+</div>
+<div class="result-container">
+  <div class="title">
+    <i class="fa fa-group"></i>
+    <span>查詢結果</span>
+  </div>
+  <div class="add-btn-container">
+    <div class="container-left">
+      <button type="button" class="btn  btn-success btn-margin-right" (click)="add_new_liaison()"><i class="fa  fa-plus"></i>新增聯絡人</button>
+      <button type="button" class="btn  btn-success btn-margin-right"><i class="fa   fa-pencil"></i>新增估價單</button>
+    </div>
+    <div class="container-right">
+      <button type="button" class="btn  btn-warning btn-margin-right"><i class="fa fa-paste"></i>複製聯絡人</button>
+    </div>
+  </div>
+  <ag-grid-angular
+  style="width: 100%; height: 400px;"
+  class="ag-theme-alpine"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  (firstDataRendered)="onFirstDataRendered($event)"
+  (gridReady)="onGridReady($event)"
+  >
+  </ag-grid-angular>
+</div>
+
+

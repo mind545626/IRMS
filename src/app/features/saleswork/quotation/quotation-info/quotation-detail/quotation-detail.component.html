@@ -1,0 +1,270 @@
+<div class="detail-container">
+  <form class="form-horizontal">
+    <section>
+      <div class="sub-title">
+        <i class="fa fa-list-alt fa-size-md"></i>
+        <h3>估價單明細</h3>
+      </div>
+      <div class="product-container">
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="CustomerID">產品</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="aaa">
+              <option selected>請選擇產品</option>>
+              <option>test01</option>>
+              <option>test02</option>
+              <option>test03</option>
+            </select>
+          </div>
+          <label class="control-label col-sm-1" for="FullName">其他產品說明</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="FullName">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="CustomerID">品牌</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="aaa">
+              <option selected>請選擇品牌</option>>
+              <option>test01</option>>
+              <option>test02</option>
+              <option>test03</option>
+            </select>
+          </div>
+          <label class="control-label col-sm-1" for="FullName">其他品牌說明</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="FullName">
+          </div>
+        </div>
+      </div>
+      <div class="section-top-bar">
+        <div class="btn-container">
+          <button type="button" class="btn btn-primary btn-margin-right"><i class="fa   fa-unsorted"></i>重新排序</button>
+          <button type="button" class="btn btn-success btn-margin-right" (click)="modify_detail()"><i class="fa  fa-pencil"></i>批次修改</button>
+        </div>
+        <div class="btn-container">
+          <button type="button" class="btn btn-success btn-margin-right" (click)="add_detail()"><i class="fa  fa-plus"></i>新增明細</button>
+          <button type="button" class="btn btn-danger"><i class="fa  fa-trash-o"></i>刪除明細</button>
+        </div>
+      </div>
+      <ag-grid-angular style="width: 100%; height: 400px;" class="ag-theme-alpine" 
+        [rowData]="rowData"
+        [rowDragManaged]="true"
+        [columnDefs]="columnDefs" 
+        [rowSelection]="rowSelection" 
+        [defaultColDef]="defaultColDef"
+        (firstDataRendered)="onFirstDataRendered($event)" 
+        (gridReady)="onGridReady($event)">
+      </ag-grid-angular>
+      <div class="form-group mr-top">
+        <label class="control-label col-sm-1" for="CustomerID">稅前合計</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="CustomerID">稅額</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="CustomerID">稅後總額</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="CustomerID">外幣稅前合計</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="CustomerID">外幣稅額</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="CustomerID">外幣稅後總額</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+      </div>
+      <div class="form-group mr-top">
+        <label class="control-label col-sm-1 discount-text" for="CustomerID">折扣率</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1 discount-text" for="CustomerID">折扣價</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <div class="col-sm-1"></div>
+        <label class="control-label col-sm-1 discount-text" for="CustomerID">外幣折扣價</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <div class="col-sm-1">
+          <button type="button" class="btn btn-primary btn-margin-right"><i class="fa fa-level-down"></i>套用折扣</button>
+        </div>
+      </div>
+      <div class="discount-container mr-top">
+        <div class="form-group">
+          <label class="control-label col-sm-1 discount-text" for="CustomerID">折扣率</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="CustomerID">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1 discount-text" for="CustomerID">折扣稅前合計</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="CustomerID">
+          </div>
+          <label class="control-label col-sm-1 discount-text" for="CustomerID">折扣稅額</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="CustomerID">
+          </div>
+          <div class="col-sm-1"></div>
+          <label class="control-label col-sm-1 discount-text" for="CustomerID">折扣稅後總額</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="CustomerID">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1 discount-text" for="CustomerID">外幣折扣稅前合計</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="CustomerID">
+          </div>
+          <label class="control-label col-sm-1 discount-text" for="CustomerID">外幣折扣稅額</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="CustomerID">
+          </div>
+          <div class="col-sm-1"></div>
+          <label class="control-label col-sm-1 discount-text" for="CustomerID">折扣外幣總額</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="CustomerID">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-middle">
+      <div class="sub-title">
+        <i class="fa fa-money fa-size-md"></i>
+        <h3>其他款項</h3>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="CustomerID">代付款項名稱</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="FullName">代付款項金額</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="FullName">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="CustomerID">住宿費</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="CustomerID">
+        </div>
+        <label class="control-label col-sm-1" for="FullName">誤餐費</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="FullName">
+        </div>
+        <label class="control-label col-sm-1" for="FullName">車資</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="FullName">
+        </div>
+      </div>
+    </section>
+    <section class="section-bottom">
+      <div class="sub-title">
+        <i class="fa fa-dollar fa-size-md"></i>
+        <h3>付款條件</h3>
+      </div>
+      <div class="btn-container text-align">
+        <button type="button" class="btn btn-success btn-margin-right" (click)="add_payment();"><i class="fa fa-plus"></i>新增付款條件</button>
+        <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i>刪除付款條件</button>
+      </div>
+      <div class="form-group table-container">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>選取</th>
+              <th>付款項目</th>
+              <th>付款比例</th>
+              <th>付款金額</th>
+              <th>本地金額</th>
+              <th>付款日期</th>
+            </tr>  
+          </thead>
+          <tbody>
+            <tr>
+              <td class="checkbox-item pd-top">
+                <input type="checkbox" name="" id="">
+              </td>
+              <td class="pd-top">
+                <select class="form-control" name="" id="">
+                  <option value="2" selected>訂金</option>
+                  <option value="3">交件收款</option>
+                  <option value="4">尾款</option>
+                </select>
+              </td>
+              <td class="pd-top">20%</td>
+              <td class="pd-top">125</td>
+              <td class="pd-top">4,050</td>
+              <td>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="paymentdate_1"[formControl]="Date1">
+                  <mat-datepicker-toggle matSuffix [for]="paymentdate_1"></mat-datepicker-toggle>
+                  <mat-datepicker #paymentdate_1></mat-datepicker>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkbox-item pd-top">
+                <input type="checkbox" name="" id="">
+              </td>
+              <td class="pd-top">
+                <select class="form-control" name="" id="">
+                  <option value="2">訂金</option>
+                  <option value="3" selected>交件收款</option>
+                  <option value="4">尾款</option>
+                </select>
+              </td>
+              <td class="pd-top">40%</td>
+              <td class="pd-top">249</td>
+              <td class="pd-top">8,100</td>
+              <td>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="paymentdate_2"[formControl]="Date2">
+                  <mat-datepicker-toggle matSuffix [for]="paymentdate_2"></mat-datepicker-toggle>
+                  <mat-datepicker #paymentdate_2></mat-datepicker>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkbox-item pd-top">
+                <input type="checkbox" name="" id="">
+              </td>
+              <td class="pd-top">
+                <select class="form-control" name="" id="">
+                  <option value="2">訂金</option>
+                  <option value="3">交件收款</option>
+                  <option value="4" selected>尾款</option>
+                </select>
+              </td>
+              <td class="pd-top">40%</td>
+              <td class="pd-top">249</td>
+              <td class="pd-top">8,100</td>
+              <td>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="paymentdate_3"[formControl]="Date3">
+                  <mat-datepicker-toggle matSuffix [for]="paymentdate_3"></mat-datepicker-toggle>
+                  <mat-datepicker #paymentdate_3></mat-datepicker>
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+    </section>
+  </form>
+</div>
+<add-payment></add-payment>
+<add-detail></add-detail>
+<modify-detail></modify-detail>

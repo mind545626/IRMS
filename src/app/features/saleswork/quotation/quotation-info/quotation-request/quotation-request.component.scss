@@ -1,0 +1,57 @@
+.quo-request-container{
+    background-color: #fff;
+    padding: 20px;
+}
+.quo-request-content{
+    margin: 0 auto;
+    padding: 20px 40px;
+    width: 800px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px #aaa;
+    font-size: 16px;
+    .form-item{
+        margin-bottom: 30px;
+    }
+}
+h2{
+    font-weight: bold;
+}
+.top-row{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    .detail{
+        display: inline-flex;
+        p{
+            margin: 0 10px;
+        }
+    }
+}
+.multiple-selection{
+    width: 100%;
+    .checkbox-inline{
+        margin-top: 10px;
+        width: 200px;
+    }
+    .multiple-input{
+        display: inline-flex;
+        align-items: center;
+        width: 300px;
+        input[type="input"]{
+            margin-left: 10px;
+            width: 150px;
+        }
+    }
+}
+.btn-container{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 800px;
+}
+.tips-text{
+    width: 100%;
+    font-size: 12px;
+    color: rgb(13, 61, 133);
+}

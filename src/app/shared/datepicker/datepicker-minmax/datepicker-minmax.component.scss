@@ -1,0 +1,34 @@
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.d-flex {
+    justify-content: space-between;
+    display: flex;
+    align-items: baseline;
+}
+
+label {
+    margin-left: 1rem;
+}
+
+.filter {
+    &__item {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 700px) {
+            flex-direction: column;
+        }
+
+    }
+}
+/*-- angular material setting --*/
+mat-form-field.mat-form-field{
+    width: 70%;
+}
+mat-form-field.mat-form-field-wrapper{
+    width: 50%;
+}

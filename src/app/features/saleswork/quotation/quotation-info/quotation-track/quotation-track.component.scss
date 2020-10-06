@@ -1,0 +1,55 @@
+.quo-track-container{
+    background-color: #fff;
+    padding: 20px;
+    min-height: 400px;
+}
+.btn-container{
+    margin-bottom: 20px;
+}
+.date{
+    width: 200px;
+}
+.staff, .liaison{
+    padding-top: 25px;
+    width: 150px;
+}
+.check{
+    padding-top: 25px;
+    width: 50px;
+    text-align: center;
+}
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+.pop-wrapper{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #bbb;
+    form{
+        padding: 20px;
+        padding-right: 30px;
+    }
+    .form-group{
+        display: flex;
+        margin-right: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+    .sub-title{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        width: 100%;
+    }
+    .sub-title-container{
+        justify-content: space-between;
+        align-items: center;
+    }
+}

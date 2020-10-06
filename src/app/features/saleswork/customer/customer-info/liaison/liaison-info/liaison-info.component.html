@@ -1,0 +1,470 @@
+<div class="liaison-info-container">
+  <div class="top-row">
+    <div class="sub-title">
+      <i class="fa fa-phone"></i>
+      <h3>聯絡人資訊</h3>
+    </div>
+    <i class="fa  fa-times cancel fa-size-md" (click)="close_liaison()"></i>
+  </div>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="LiaisonName"><span class="must-icon">*</span>聯絡人</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="LiaisonName" value="吳秋順">
+      </div>
+      <label class="control-label col-sm-1" for="LiaisonEnglishName">聯絡人<br/>(外文)</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="LiaisonEnglishName" value="Tony Wu">
+      </div>
+      <label class="control-label col-sm-1" for="Title"><span class="must-icon">*</span>部門/職稱</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="Title" value="企劃部/部門職員">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="TelHome">聯絡人電話</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="TelHome" value="2241-4721">
+      </div>
+      <label class="control-label col-sm-1" for="Tel">聯絡人分機</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="Tel" value="23457">
+      </div>
+      <label class="control-label col-sm-1" for="CellPhone">聯絡人<br/>行動電話</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="CellPhone" value="0927-412-390">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="FaxNo">聯絡人傳真</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="FaxNo" placeholder="請輸入聯絡人傳真">
+      </div>
+      <label class="control-label col-sm-1" for="Email">電子郵件</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="Email" value="test123@gmail.com">
+      </div>
+      <label class="control-label col-sm-1" for="AccEmail">付款人Email</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="AccEmail" value="test123@gmail.com">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="MsnYahoo">通訊帳號一</label>
+      <div class="col-sm-2">
+        <select type="text" class="form-control" id="MsnYahoo">
+          <option>請選擇</option>
+          <option>Yahoo</option>
+          <option>MSN</option>
+          <option selected>Line</option>
+          <option>WeChat</option>
+          <option>Skype</option>
+          <option>其他</option>
+        </select> 
+      </div>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="MsnYahoo" value="test123">
+      </div>
+      <label class="control-label col-sm-1" for="MsnYahoo">通訊帳號二</label>
+      <div class="col-sm-2">
+        <select type="text" class="form-control" id="MsnYahoo">
+          <option selected>請選擇</option>
+          <option>Yahoo</option>
+          <option>MSN</option>
+          <option>Line</option>
+          <option>WeChat</option>
+          <option>Skype</option>
+          <option>其他</option>
+        </select> 
+      </div>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="MsnYahoo" placeholder="請輸入通訊帳號">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Sex">性別</label>
+      <div class="col-sm-3">
+        <select type="text" class="form-control" id="Sex">
+          <option>請選擇</option>
+          <option selected>先生</option>
+          <option>小姐</option>
+        </select> 
+      </div>
+      <!-- 沒有column name -->
+      <label class="control-label col-sm-1" for="Liaison">生日</label>
+      <div class="col-sm-3">
+        <mat-form-field>
+          <mat-label>選擇生日</mat-label>
+          <input matInput [matDatepicker]="birthday" [formControl]="Birth">
+          <mat-datepicker-toggle matSuffix [for]="birthday"></mat-datepicker-toggle>
+          <mat-datepicker #birthday></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1"><span class="must-icon">*</span>客戶地址</label>
+        <div class="col-sm-3">
+          <select type="text" class="form-control" name="CustomerAddress" (change)="myVar2 = !myVar2">
+            <option>國內</option>
+            <option>國外</option>
+          </select> 
+        </div>
+        <div class="col-sm-1">
+          <button type="button" class="btn btn-warning" ><i class="fa fa-copy"></i>複製地址</button>
+        </div>
+    </div>
+    <div class="form-group" *ngIf="!myVar2">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-2">
+        <select type="text" class="form-control" id="aaa">
+          <option selected>請選擇縣/市</option>>
+          <option>台北市</option>>
+          <option>新北市</option>
+          <option>桃園市</option>
+          <option>新竹市</option>
+          <option>苗栗縣</option>
+        </select> 
+      </div>
+      <div class="col-sm-2">
+        <select type="text" class="form-control" id="InvoiceDate">
+          <option selected>請選擇市/區/鄉/鎮</option>>
+        </select> 
+      </div>
+      <div class="col-sm-1">
+        <input type="text" class="form-control" id="Tel" placeholder="郵遞區號">
+      </div>
+      <div class="col-sm-2">
+        <select type="text" class="form-control" id="InvoiceDate">
+          <option selected>請選擇街/路/段</option>>
+        </select>
+      </div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="Tel" placeholder="請輸入地址">
+      </div>
+    </div>
+    <div class="form-group" *ngIf="myVar2">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-11">
+        <input type="text" class="form-control" id="Tel" placeholder="請輸入國外客戶完整地址">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1"><span class="must-icon">*</span>發票地址</label>
+        <div class="col-sm-3">
+          <select type="text" class="form-control" id="InvoiceDate" (change)="myVar3 = !myVar3"> 
+            <option selected>國內</option>
+            <option>國外</option>
+          </select> 
+        </div>
+        <div class="col-sm-2 text-left">
+          <button type="button" class="btn btn-warning" ><i class="fa fa-copy"></i>複製地址</button>
+        </div>
+        <div class="checkbox col-sm-2">
+          <label>
+            <input type="checkbox"> 同客戶地址
+          </label>
+        </div>
+    </div>
+    <div class="form-group" *ngIf="!myVar3">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-2">
+        <select type="text" class="form-control" id="aaa">
+          <option selected>請選擇縣/市</option>>
+          <option>台北市</option>>
+          <option>新北市</option>
+          <option>桃園市</option>
+          <option>新竹市</option>
+          <option>苗栗縣</option>
+        </select> 
+      </div>
+      <div class="col-sm-2">
+        <select type="text" class="form-control" id="InvoiceDate">
+          <option selected>請選擇市/區/鄉/鎮</option>>
+        </select> 
+      </div>
+      <div class="col-sm-1">
+        <input type="text" class="form-control" id="Tel" placeholder="郵遞區號">
+      </div>
+      <div class="col-sm-2">
+        <select type="text" class="form-control" id="InvoiceDate">
+          <option selected>請選擇街/路/段</option>>
+        </select>
+      </div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="Tel" placeholder="請輸入地址">
+      </div>
+    </div>
+    <div class="form-group" *ngIf="myVar3">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-11">
+        <input type="text" class="form-control" id="Tel" placeholder="請輸入國外客戶完整地址">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Memo">聯絡人<br/>備註/習性</label>
+      <div class="col-sm-11">
+        <textarea name="Memo" id="Memo"  rows="5"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <!-- 沒有column name -->
+      <label class="control-label col-sm-1" for="Liaison">聯絡人文件注意事項</label>
+      <div class="col-sm-11">
+        <textarea name="Memo" id="Memo"  rows="5"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="IntroducerNo">介編人編號</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="IntroducerNo" placeholder="請輸入介編人編號">
+      </div>
+      <label class="control-label col-sm-1" for="IntroducedNo">被介紹人編號</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="IntroducedNo" placeholder="請輸入被介紹人編號">
+      </div>
+      <label class="control-label col-sm-1" for="Liaison">來源</label>
+      <div class="col-sm-3">
+        <select type="text" class="form-control" id="InvoiceDate">
+          <option selected>請選擇</option>
+          <option>線上</option>
+          <option>一括</option>
+        </select>
+      </div> 
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison"><span class="must-icon">*</span>問卷語文版本</label>
+      <div class="col-sm-3">
+        <select type="text" class="form-control" id="InvoiceDate">
+          <option>請選擇</option>
+          <option>英文</option>
+          <option selected>繁中</option>
+          <option>簡中</option>
+          <option>日文</option>
+          <option>韓文</option>
+          <option>泰文</option>
+        </select>
+      </div>
+      <label class="control-label col-sm-1" for="SendNARV">是否發應收帳款通知</label>
+      <div class="col-sm-3">
+        <select type="text" class="form-control" id="SendNARV">
+          <option>是</option>
+          <option selected>否</option>
+        </select> 
+      </div>
+      <label class="control-label col-sm-1" for="NonIntroductionMail">是否發介紹郵件</label>
+      <div class="col-sm-3">
+        <select type="text" class="form-control" id="NonIntroductionMail">
+          <option>是</option>
+          <option selected>否</option>
+        </select> 
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">聯絡人新增日期</label>
+      <div class="col-sm-3">
+        <mat-form-field>
+          <input matInput [matDatepicker]="adddate" [formControl]="AddDate" disabled>
+          <mat-datepicker-toggle matSuffix [for]="adddate"></mat-datepicker-toggle>
+          <mat-datepicker #adddate></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <label class="control-label col-sm-1" for="SendNARV">聯絡人最近估價日期</label>
+      <div class="col-sm-3">
+        <mat-form-field>
+          <input matInput [matDatepicker]="quodate" [formControl]="QuoDate" disabled>
+          <mat-datepicker-toggle matSuffix [for]="quodate"></mat-datepicker-toggle>
+          <mat-datepicker #quodate></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <label class="control-label col-sm-1" for="NonIntroductionMail">聯絡人首次成交日期</label>
+      <div class="col-sm-3">
+        <mat-form-field>
+          <input matInput [matDatepicker]="tradedate" [formControl]="TradeDate" disabled>
+          <mat-datepicker-toggle matSuffix [for]="tradedate" disabled></mat-datepicker-toggle>
+          <mat-datepicker #tradedate></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">聯絡人問候函寄送日期</label>
+      <div class="col-sm-3">
+        <mat-form-field>
+          <input matInput [matDatepicker]="sentdate" [formControl]="SentDate" disabled>
+          <mat-datepicker-toggle matSuffix [for]="sentdate"></mat-datepicker-toggle>
+          <mat-datepicker #sentdate></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <label class="control-label col-sm-1" for="SendNARV">最後承辦人</label>
+      <div class="col-sm-3">
+        <select type="text" class="form-control" id="SendNARV" disabled="disabled">
+          <option>是</option>
+          <option selected>Sam</option>
+        </select> 
+      </div>
+      <label class="control-label col-sm-1" for="Marketing">開發人員</label>
+      <div class="col-sm-3">
+        <select type="text" class="form-control" id="InvoiceDate" disabled="disabled">
+          <option selected>Shane</option>
+          <option>test02</option>
+          <option>test03</option>
+        </select> 
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1">聯絡人提醒設定</label>
+      <div class="col-sm-3">
+        <select type="text" class="form-control" id="InvoiceDate">
+          <option selected>單次提醒</option>
+          <option>週期-30天</option>
+          <option>週期-45天</option>
+          <option>週期-60天</option>
+          <option>週期-90天</option>
+          <option>週期-120天</option>
+        </select> 
+      </div>
+      <div class="col-sm-3">
+        <mat-form-field>
+          <mat-label>選擇提醒日期</mat-label>
+          <input matInput [matDatepicker]="rdate">
+          <mat-datepicker-toggle matSuffix [for]="rdate"></mat-datepicker-toggle>
+          <mat-datepicker #rdate></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-sm-3 btn-left">
+        <button type="button" class="btn  btn-success"><i class="fa fa-plus"></i>新增提醒</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-11">
+        <table class="table notification-table">
+          <thead>
+            <tr>
+              <th scope="col">提醒設定日期</th>
+              <th scope="col">提醒模式</th>
+              <th scope="col">下次提醒時間</th>
+              <th class="function">功能</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="remind-date">
+                  <mat-form-field>
+                    <input matInput [matDatepicker]="date1" [formControl]="Date1">
+                    <mat-datepicker-toggle matSuffix [for]="date1"></mat-datepicker-toggle>
+                    <mat-datepicker #date1></mat-datepicker>
+                  </mat-form-field>
+              </td>
+              <td class="model">
+                <select type="text" class="form-control" id="InvoiceDate">
+                  <option selected>單次提醒</option>
+                  <option>週期-30天</option>
+                  <option>週期-45天</option>
+                  <option>週期-60天</option>
+                  <option>週期-90天</option>
+                  <option>週期-120天</option>
+                </select> 
+              </td>
+              <td>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="date11" [formControl]="Date11">
+                  <mat-datepicker-toggle matSuffix [for]="date11"></mat-datepicker-toggle>
+                  <mat-datepicker #date11></mat-datepicker>
+                </mat-form-field>
+              </td>
+              <td class="function">
+                <button type="button" class="btn  btn-primary btn-margin-right"><i class="fa  fa-save"></i>儲存修改</button>
+                <button type="button" class="btn  btn-danger"><i class="fa  fa-trash-o"></i>刪除</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="remind-date">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="date2" [formControl]="Date2">
+                  <mat-datepicker-toggle matSuffix [for]="date2"></mat-datepicker-toggle>
+                  <mat-datepicker #date2></mat-datepicker>
+                </mat-form-field>
+              </td>
+              <td class="model">
+                <select type="text" class="form-control" id="InvoiceDate">
+                  <option>單次提醒</option>
+                  <option>週期-30天</option>
+                  <option>週期-45天</option>
+                  <option>週期-60天</option>
+                  <option selected>週期-90天</option>
+                  <option>週期-120天</option>
+                </select> 
+              </td>
+              <td>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="date22" [formControl]="Date22">
+                  <mat-datepicker-toggle matSuffix [for]="date22"></mat-datepicker-toggle>
+                  <mat-datepicker #date22></mat-datepicker>
+                </mat-form-field>
+              </td>
+              <td class="function">
+                <button type="button" class="btn  btn-primary btn-margin-right"><i class="fa  fa-save"></i>儲存修改</button>
+                <button type="button" class="btn  btn-danger"><i class="fa  fa-trash-o"></i>刪除</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="remind-date">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="date3" [formControl]="Date3">
+                  <mat-datepicker-toggle matSuffix [for]="date3"></mat-datepicker-toggle>
+                  <mat-datepicker #date3></mat-datepicker>
+                </mat-form-field>
+              </td>
+              <td class="model">
+                <select type="text" class="form-control" id="InvoiceDate">
+                  <option>單次提醒</option>
+                  <option selected>週期-30天</option>
+                  <option>週期-45天</option>
+                  <option>週期-60天</option>
+                  <option>週期-90天</option>
+                  <option>週期-120天</option>
+                </select> 
+              </td>
+              <td>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="date33" [formControl]="Date33">
+                  <mat-datepicker-toggle matSuffix [for]="date33"></mat-datepicker-toggle>
+                  <mat-datepicker #date33></mat-datepicker>
+                </mat-form-field>
+              </td>
+              <td class="function">
+                <button type="button" class="btn  btn-primary btn-margin-right"><i class="fa  fa-save"></i>儲存修改</button>
+                <button type="button" class="btn  btn-danger"><i class="fa  fa-trash-o"></i>刪除</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="Liaison">停用理由</label>
+      <div class="col-sm-3">
+        <select type="text" class="form-control" id="InvoiceDate">
+          <option selected>請選擇</option>
+          <option>公司倒閉</option>
+          <option>公司被合併</option>
+          <option>聯絡人離職</option>
+          <option>交易未付款</option>
+          <option>重複建檔</option>
+          <option>其他</option>
+        </select>
+      </div>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="LiaisonName">
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="btn btn-danger" ><i class="fa fa-ban"></i>停用聯絡人</button>
+      </div>
+    </div>
+    <div class="btn-container btn-center">
+      <button type="button" class="btn  btn-success" (click)="close_liaison()"><i class="fa  fa-check"></i>儲存變更</button>
+      <button type="button" class="btn btn-danger"><i class="fa fa-times"></i>取消變更</button>
+    </div>
+  </form>
+</div>
+

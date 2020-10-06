@@ -1,0 +1,80 @@
+.attachment-container{
+    margin: 0 0 30px;
+    width: 100%;
+    min-height: 500px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    .attachment-content{
+        padding: 20px;
+        padding-right: 30px;
+    }
+}
+
+.sub-title-container{
+    justify-content: space-between;
+    align-items: center;
+}
+.top-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa{
+    margin-right: 10px;
+    &-cloud-upload{
+        font-size: 24px;
+    }
+    &-folder{
+        color: #FFEA2B;
+    }
+    &-times-lg{
+        font-size: 24px;
+        cursor: pointer;
+        &:hover{
+            opacity: .8;
+        }
+    }
+} 
+
+form{
+    padding: 20px;
+    padding-right: 30px;
+    .form-group{
+        display: flex;
+        justify-content: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.sub-title{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    width: 100%;
+}
+input{
+    width: 100%;
+}
+.btn-container{
+    display: flex;
+    align-items: center;
+}
+.mat-accordion .mat-expansion-panel{
+    margin: 20px 0;
+}
+.pop-wrapper{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #bbb;
+}
+body .ui-treetable .ui-treetable-tbody > tr{
+    
+}

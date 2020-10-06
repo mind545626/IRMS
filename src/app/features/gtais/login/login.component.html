@@ -1,0 +1,32 @@
+
+<div id="main" role="main" class="animated fadeInDown">
+    <div id="content" class="container row">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+            <div class="wrapper">
+                <div id="login">
+                    <img class="login__logo" src="assets/img/gtais/ptsgi_logo.png" alt="PTSGI-LOGO">
+                    <h2 class="login__title">GTAIS3.0<span class="login__subtitle">{{'System Management' | i18n}}</span></h2>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+                        <mat-form-field class="field-wrap">
+                            <mat-label class="label"><i class="icon-append fa fa-user"></i> {{'Account' | i18n}}</mat-label>
+                            <input type="" class="input" matInput data-smart-validate-input="" data-message-required="請輸入使用者帳號" formControlName="UserId" required>
+                        </mat-form-field>
+
+                        <mat-form-field class="field-wrap">
+                            <mat-label class="label"><i class="icon-append fa fa-lock"></i> {{'Password' | i18n}}</mat-label>
+                            <input type="password" class="input" matInput data-smart-validate-input="" data-message-required="請輸入使用者密碼" formControlName="UserPW" required>
+                        </mat-form-field>
+                        <div class="lang-container">
+                            <i class="icon-append fa  fa-flag"></i> 
+                            <div class="lang-txt">{{'Language' | i18n}}:</div>
+                            <sa-language-selector></sa-language-selector>
+                        </div>
+                        <button class="login__button button-block">{{'Login' | i18n}}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

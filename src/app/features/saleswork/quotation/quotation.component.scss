@@ -1,0 +1,49 @@
+form{
+    padding: 20px;
+    padding-right: 30px;
+}
+.condition{
+    &-container{
+        margin: 0 0 30px;
+        width: 100%;
+        min-height: 450px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+    }
+}
+.title{
+    display: flex;
+    align-items: center;
+    height: 34px;
+    color: #fff;
+    background-color: #8DB6B2;
+}
+.fa-group{
+    margin: 0 5px 0 10px;
+}
+.result-container{
+    overflow: hidden;
+}
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+    .fa{
+        margin-right: 10px;
+    }
+}
+input[type="text"]{
+    width: 100%;
+}
+.selection{
+    width: 60px;
+}
+
+.btn{
+    width: 100px;
+    &-primary{
+        margin-right: 10px;
+    }
+    &-success{
+        width: 120px;
+    }
+}

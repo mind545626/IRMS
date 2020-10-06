@@ -1,0 +1,42 @@
+
+.notice-container{
+    margin: 0 0 30px;
+    width: 100%;
+    min-height: 350px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.prime-ng-table{
+    padding: 10px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    height: 34px;
+    color: #fff;
+    background-color: #8DB6B2;
+}
+.notice-search{
+    display: flex;
+    .search-container{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        input[type="text"]{
+            margin-left: 10px;
+            width: 100%;
+            min-width: 300px;
+        }
+    }
+}
+body .ui-table .ui-table-tbody > tr > td{
+    border: none;
+}
+button{
+    margin: 0 10px;
+    border-radius: 50%;
+}

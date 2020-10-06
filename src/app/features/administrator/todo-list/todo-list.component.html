@@ -1,0 +1,81 @@
+<div class="todo-list-container">
+    <div class="title">
+        <span>{{'Todo-list'|i18n }}</span>
+    </div>
+    <div class="tab-container">
+        <p-tabView>
+            <p-tabPanel header="待聯絡清單">
+                <div class="gmd-container-1">
+                    <p-table #dt [columns]="cols" [value]="contactliaison" [paginator]="true" [scrollable]="true" [rows]="10"
+                        [(selection)]="selectedLiaisons" [resizableColumns]="true" [style]="{width: '100%'}"
+                        [showCurrentPageReport]="true"
+                        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                        [rowsPerPageOptions]="[10,20,30]" styleClass="p-todotable-customers">
+                        <ng-template pTemplate="colgroup" let-columns>
+                            <colgroup>
+                                <col *ngFor="let col of columns" [style.width]="col.width">
+                            </colgroup>
+                        </ng-template>
+                        <ng-template pTemplate="header" let-columns>
+                            <tr>
+                                <th *ngFor="let col of columns">
+                                    {{col.header|i18n }}
+                                </th>
+                            </tr>
+                            <tr>
+                                <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                                    <div style="width: 60px" *ngSwitchCase="'select'"></div>
+                                    <input *ngSwitchCase="'CustomerID'" pInputText type="text"
+                                        (input)="dt.filter($event.target.value, col.field, 'contains')">
+                                    <input *ngSwitchCase="'FullName'" pInputText type="text"
+                                        (input)="dt.filter($event.target.value, col.field, 'contains')">
+                                    <input *ngSwitchCase="'Liaison'" pInputText type="text"
+                                        (input)="dt.filter($event.target.value, col.field, 'contains')">
+                                    <input *ngSwitchCase="'Tel'" pInputText type="text"
+                                        (input)="dt.filter($event.target.value, col.field, 'contains')">
+                                    <input *ngSwitchCase="'Email'" pInputText type="text"
+                                        (input)="dt.filter($event.target.value, col.field, 'contains')">
+                                    <p-calendar *ngSwitchCase="'ContactDate'" (onSelect)="onDateSelect($event)" (onClearClick)="dt.filter('', 'date', 'equals')" [showButtonBar]="true" styleClass="p-column-filter" placeholder="選擇日期" [readonlyInput]="true" dateFormat="yy-mm-dd"></p-calendar>
+                                    <input *ngSwitchCase="'Memo'" pInputText type="text"
+                                        (input)="dt.filter($event.target.value, col.field, 'contains')">
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-rowData let-columns="columns">
+                            <tr>
+                                <td *ngFor="let col of columns" class="ui-resizable-column">
+                                    <ng-container *ngIf="col.field == 'CustomerID'">
+                                        <a routerLink="/saleswork/customer/customer-info">
+                                            {{rowData[col.field]}}
+                                        </a>
+                                    </ng-container>
+                                    <ng-container *ngIf="col.field == 'Liaison'">
+                                        <a href="#">
+                                            {{rowData[col.field]}}
+                                        </a>
+                                    </ng-container>
+                                    <ng-container *ngIf="col.field == 'Memo'">
+                                        <span class="memo">
+                                            {{rowData[col.field]}}
+                                        </span>
+                                        <span class="all-memo">
+                                            {{rowData[col.field]}}
+                                        </span>
+                                    </ng-container>
+                                    <ng-container *ngIf="col.field !== 'CustomerID' && col.field !=='Memo' && col.field !=='Liaison'">
+                                        {{rowData[col.field]}}
+                                    </ng-container>
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="客戶維護清單">
+                <div class="gmd-container-2">
+
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+</div>

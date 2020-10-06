@@ -1,0 +1,14 @@
+<div class="login-info" *ngIf="(currentUser$ | async) as currentUser">
+  <!-- <span><a (click)="toggleShortcut()">
+	   <img *ngIf="user.picture" [src]="user.picture" alt="me" class="online"/>
+      <span>{{user.username }}</span>&nbsp;<i class="fa fa-angle-down"></i>
+    </a>
+   </span> -->
+    <span>
+        <a (click)="shortcutTo(['app-views/profile'])">
+            <!--<img *ngIf="user.picture" [src]="user.picture" alt="me" class="online"/>-->
+            <img src="assets/img/avatars/sunny.png" [alt]="currentUser['UserName']" class="online"/>
+            <span>{{ currentUser['UserName'] }}</span>
+        </a>
+    </span>
+</div>

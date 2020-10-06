@@ -1,0 +1,25 @@
+<div class="d-flex">
+    <div class="filter__item">
+        <mat-form-field color="primary" style="margin-right: .5rem;">
+            <mat-label>開始時間</mat-label>
+            <input matInput
+                   [min]="minDate"
+                   [max]="maxDate"
+                   [formControl]="DatePicker"
+                   [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    
+        <mat-form-field color="primary">
+            <mat-label>結束時間</mat-label>
+            <input matInput
+                   [min]="minDate2"
+                   [max]="maxDate2"
+                   [formControl]="DatePicker2"
+                   [matDatepicker]="picker2">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+    </div>7
+</div>

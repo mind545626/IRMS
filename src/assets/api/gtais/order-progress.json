@@ -1,0 +1,269 @@
+{
+    "data" : [
+        { 
+            "no": "1",
+            "CustomerID": "542312", 
+            "FullName": "本仁元股份有限公司",
+            "Liaison": "吳秋順",
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "估價單成立",
+            "status": "1"
+        },
+        { 
+            "no": "2",
+            "CustomerID": "478321", 
+            "FullName": "長安祥股份有限公司",
+            "Liaison": "張大發", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "交易單成立",
+            "status": "2"
+            
+            
+        },
+        { 
+            "no": "3",
+            "CustomerID": "323398", 
+            "FullName": "鼎宏聖股份有限公司",
+            "Liaison": "李小美", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "工作單成立",
+            "status": "3"
+           
+            
+        },
+        { 
+            "no": "4",
+            "CustomerID": "946871", 
+            "FullName": "裕盛股份有限公司",
+            "Liaison": "陳小英", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "指派完成",
+            "status": "4"
+            
+        },
+        { 
+            "no": "5",
+            "CustomerID": "872314", 
+            "FullName": "中宏股份有限公司",
+            "Liaison": "江大山", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "指派交件",
+            "status": "5"
+            
+        },
+        { 
+            "no": "6",
+            "CustomerID": "469823", 
+            "FullName": "恆飛本股份有限公司",
+            "Liaison": "劉中吉", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "業務交件",
+            "status": "6"
+            
+        },
+        { 
+            "no": "7",
+            "CustomerID": "289341", 
+            "FullName": "仁中信股份有限公司",
+            "Liaison": "蔡小茂", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "訂單完成",
+            "status": "7"
+            
+        },
+        { 
+            "no": "8",
+            "CustomerID": "234092", 
+            "FullName": "萬盛股份有限公司",
+            "Liaison": "李中凱", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "業務交件",
+            "status": "6"
+            
+        },
+        { 
+            "no": "9",
+            "CustomerID": "472654", 
+            "FullName": "隆和股份有限公司",
+            "Liaison": "羅大信", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "估價單成立",
+            "status": "1"
+            
+        },
+        { 
+            "no": "10",
+            "CustomerID": "298340", 
+            "FullName": "慶通股份有限公司",
+            "Liaison": "陳小偉", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "估價單成立",
+            "status": "1"
+    
+            
+        },
+        { 
+            "no": "2",
+            "CustomerID": "478321", 
+            "FullName": "長安祥股份有限公司",
+            "Liaison": "張大發", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "業務交件",
+            "status": "6"
+
+        },
+        { 
+            "no": "3",
+            "CustomerID": "323398", 
+            "FullName": "鼎宏聖股份有限公司",
+            "Liaison": "李小美", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "估價單成立",
+            "status": "1"
+          
+        },
+        { 
+            "no": "4",
+            "CustomerID": "946871", 
+            "FullName": "裕盛股份有限公司",
+            "Liaison": "陳小英", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "指派完成",
+            "status": "4"
+        
+        },
+        { 
+            "no": "5",
+            "CustomerID": "872314", 
+            "FullName": "中宏股份有限公司",
+            "Liaison": "江大山", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "指派交件",
+            "status": "5"
+            
+        },
+        { 
+            "no": "9",
+            "CustomerID": "472654", 
+            "FullName": "隆和股份有限公司",
+            "Liaison": "羅大信", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "估價單成立",
+            "status": "1"
+            
+        },
+        { 
+            "no": "10",
+            "CustomerID": "298340", 
+            "FullName": "慶通股份有限公司",
+            "Liaison": "陳小偉", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "估價單成立",
+            "status": "1"
+    
+            
+        },
+        { 
+            "no": "2",
+            "CustomerID": "478321", 
+            "FullName": "長安祥股份有限公司",
+            "Liaison": "張大發", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "估價單成立",
+            "status": "1"
+
+        },
+        { 
+            "no": "3",
+            "CustomerID": "323398", 
+            "FullName": "鼎宏聖股份有限公司",
+            "Liaison": "李小美", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "指派完成",
+            "status": "4"
+          
+        },
+        { 
+            "no": "4",
+            "CustomerID": "946871", 
+            "FullName": "裕盛股份有限公司",
+            "Liaison": "陳小英", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "估價單成立",
+            "status": "1"
+        
+        },
+        { 
+            "no": "5",
+            "CustomerID": "872314", 
+            "FullName": "中宏股份有限公司",
+            "Liaison": "江大山", 
+            "QuoID": "202002203415",
+            "OrderNo": "WW9000514",
+            "OrderDate": "2020-02-20",
+            "EnglishName":"Allen",
+            "OrderProgress": "指派交件",
+            "status": "5"
+            
+        }
+
+       
+    ]
+}

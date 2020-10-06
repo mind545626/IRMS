@@ -1,0 +1,39 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-content></ng-content>
+
+    <ng-container matColumnDef="sort">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> 流水號 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.sort }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="department">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> 單位 </th>
+        <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="user">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> 使用者 </th>
+        <td mat-cell *matCellDef="let element"> {{element.user}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cctvid">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> 攝影機編號 </th>
+        <td mat-cell *matCellDef="let element"> {{element.cctvid}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> 攝影機名稱 </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ip">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> IP </th>
+        <td mat-cell *matCellDef="let element"> {{element.ip}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="log">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> 查詢時間 </th>
+        <td mat-cell *matCellDef="let element"> {{element.log}} </td>
+    </ng-container>
+
+</table>

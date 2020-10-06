@@ -1,0 +1,65 @@
+{
+    "data" : [
+       {
+        "Department": "業務部",
+        "NoticeContent": "測試123456789",
+        "Creator": "李小明",
+        "CreationDate": "2020-09-10"
+       },
+       {
+        "Department": "指派部",
+        "NoticeContent": "測試123456789",
+        "Creator": "李小明",
+        "CreationDate": "2020-09-10"
+       },
+       {
+        "Department": "人力資源部",
+        "NoticeContent": "測試123456789",
+        "Creator": "李小明",
+        "CreationDate": "2020-09-10"
+       },
+       {
+        "Department": "會計部",
+        "NoticeContent": "測試123456789",
+        "Creator": "李小明",
+        "CreationDate": "2020-09-10"
+       },
+       {
+        "Department": "資訊部",
+        "NoticeContent": "測試123456789",
+        "Creator": "李小明",
+        "CreationDate": "2020-09-10"
+       },
+       {
+        "Department": "資訊部",
+        "NoticeContent": "測試123456789",
+        "Creator": "李小明",
+        "CreationDate": "2020-09-10"
+       },
+       {
+        "Department": "會計部",
+        "NoticeContent": "測試123456789",
+        "Creator": "李小明",
+        "CreationDate": "2020-09-10"
+       },
+       {
+        "Department": "業務部",
+        "NoticeContent": "測試123456789",
+        "Creator": "李小明",
+        "CreationDate": "2020-09-10"
+       },
+       {
+        "Department": "人力資源部",
+        "NoticeContent": "測試123456789",
+        "Creator": "李小明",
+        "CreationDate": "2020-09-10"
+       },
+       {
+        "Department": "人力資源部",
+        "NoticeContent": "測試123456789",
+        "Creator": "李小明",
+        "CreationDate": "2020-09-10"
+       }
+
+    ]
+}

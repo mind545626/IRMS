@@ -1,0 +1,30 @@
+#header {
+    background-image: none;
+    background-color: #FFE871;
+    // background:-moz-linear-gradient(top,#28445d 93%,#27324d 100%);background:-webkit-gradient(linear,top top,right top,color-stop(93%,#28445d),color-stop(100%,#27324d));background:-webkit-linear-gradient(top,#28445d 93%,#27324d 100%);background:-o-linear-gradient(top,#28445d 93%,#27324d 100%);background:-ms-linear-gradient(top,#28445d 93%,#27324d 100%);background:linear-gradient(to bottom,#28445d 93%,#27324d 100%);
+}
+
+#logo > img {
+    margin-top: -10px;
+    height: 100%;
+    width: auto;
+}
+
+#mobile-profile-img a.userdropdown img {
+    border: none !important;
+    color: #fff;
+}
+
+.countdown {
+    margin: 10px;
+    float: right;
+    font-size: 18px;
+
+    @media only screen and (max-width: 500px) {
+        display: none;
+    }
+}
+
+// .bg-trans-gradient {
+//     background: linear-gradient(250deg,#3e93d6,#8a75aa);
+// }

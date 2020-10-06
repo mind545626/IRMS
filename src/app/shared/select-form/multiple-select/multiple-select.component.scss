@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 70%;
+}
+
+.d-flex {
+    justify-content: space-between;
+    display: flex;
+    align-items: baseline;
+}
+
+label {
+    margin-left: 1rem;
+}
+
+.additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+}

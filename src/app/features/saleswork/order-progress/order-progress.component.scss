@@ -1,0 +1,60 @@
+form{
+    padding: 20px;
+    padding-right: 30px;
+}
+.condition{
+    &-container{
+        margin: 0 0 30px;
+        width: 100%;
+        min-height: 250px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+    }
+}
+.title{
+    display: flex;
+    align-items: center;
+    height: 34px;
+    color: #fff;
+    background-color: #8DB6B2;
+}
+.fa-tasks{
+    margin: 0 5px 0 10px;
+}
+.btn-container{
+    text-align: right;
+}
+.result-container{
+    background-color: #fff;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+.add-btn-container{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.fa{
+    margin-right: 10px;
+}
+.btn{
+    width: 100px;
+    &-primary{
+        margin-right: 10px;
+    }
+    &-quo{
+        width: 120px;
+        margin-left: 10px;
+    }
+}
+input[type="text"], input[type="number"], input[type="email"] {
+    width: 100%;
+}
+.selection{
+    width: 60px;
+}

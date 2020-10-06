@@ -1,0 +1,49 @@
+<div id="content">
+  <div class="row">
+    <sa-big-breadcrumbs [items]="['系統管理員', '個人資料']" icon="group" class="col-xs-12 col-sm-7 col-md-7 col-lg-4"></sa-big-breadcrumbs>
+    <!-- <sa-stats></sa-stats> -->
+  </div>
+  <!-- end row -->
+  <!-- row -->
+  <div class="row profile-container">
+    <div class="profile-wrapper">
+      <div class="profile-content">
+        <div class="basic-info">
+          <div class="headshot">
+            <img src="assets/img/avatars/sunny.png" alt="">
+          </div>
+          <table>
+            <tr>
+              <td class="title">{{'AccountID' | i18n}}：</td>
+              <td>P1000</td>
+            </tr>
+            <tr>
+              <td class="title">{{'ChineseName' | i18n}}：</td>
+              <td>林柏成</td>
+            </tr>
+            <tr>
+              <td class="title">{{'EnglishName' | i18n}}：</td>
+              <td>Leon</td>
+            </tr>
+            <tr>
+              <td class="title">{{'Department' | i18n}}：</td>
+              <td>資訊部</td>
+            </tr>
+            <tr>
+              <td class="title">{{'Role' | i18n}}：</td>
+              <td>ADMIN_1</td>
+            </tr>
+          </table>
+        <div class="feature-setting"></div>
+        </div>
+        <div class="i18n-container">
+          <sa-language-selector></sa-language-selector>  
+        </div>
+        <div>
+          <button class="btn btn-success">儲存設定</button>           
+        </div>
+      </div>
+   </div>
+  </div>
+  <!-- end row -->
+</div>

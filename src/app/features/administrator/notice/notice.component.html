@@ -1,0 +1,57 @@
+<div id="content">
+    <div class="row">
+        <sa-big-breadcrumbs [items]="['系統首頁', '個人中心']" icon="home" class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        </sa-big-breadcrumbs>
+    </div>
+    <!-- 公告內容面板 Start -->
+    <div class="notice-container">
+        <div class="title">
+            <span>{{'News'| i18n}}</span>
+        </div>
+        <div class="prime-ng-table">
+            <p-table  [columns]="cols" [value]="notices" #dt [value]="products" [rows]="5" [paginator]="true"
+                [globalFilterFields]="['Department','NoticeContent','Creator','CreationDate']" [rowHover]="true" dataKey="id"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [showCurrentPageReport]="true"  styleClass="p-notice-customer"
+                [rowsPerPageOptions]="[5,10,20]">
+                <ng-template pTemplate="caption">
+                    <div class="p-d-flex p-ai-center p-jc-between notice-search">
+                        <h5 class="p-m-0">{{'Search'| i18n}}</h5>
+                        <div class="p-input-icon-left search-container">
+                            <input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')"
+                                placeholder="請輸入文字，查詢部門/公告內容/建立者" />
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="colgroup" let-columns>
+                    <colgroup>
+                        <col *ngFor="let col of columns" [style.width]="col.width">
+                    </colgroup>
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns">
+                            {{col.header | i18n}}
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-notice>
+                    <tr>
+                        <td>{{notice.Department}}</td>
+                        <td>{{notice.NoticeContent}}</td>
+                        <td>{{notice.Creator}}</td>
+                        <td>{{notice.CreationDate}}</td>
+                        <td class="btn-container">
+                            <button pButton pRipple icon="pi pi-file-o" class="p-button-success"></button>
+                            <button pButton pRipple icon="pi pi-cloud-download"></button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+    <!-- 公告內容面板 End -->
+    <todo-list></todo-list>
+   
+
+    <!-- 詳細公告內容面板 Start -->

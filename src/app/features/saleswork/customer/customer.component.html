@@ -1,0 +1,239 @@
+<!-- MAIN CONTENT -->
+<div id="content">
+    <div class="row">
+        <sa-big-breadcrumbs [items]="['業務作業', '客戶維護']" icon="briefcase" class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        </sa-big-breadcrumbs>
+    </div>
+
+    <!-- 查詢條件面板 START -->
+    <div class="condition-container">
+        <div class="title">
+            <i class="fa fa-group"></i>
+            <span>客戶查詢</span>
+        </div>
+        <form class="form-horizontal" [formGroup]="searchForm" (ngSubmit)="searchClick()">
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="CustomerID">客戶編號</label>
+                <div class="col-sm-3">
+                    <input type="text" id="CustomerID" placeholder="請輸入客戶編號"
+                           [ngClass]="{'is-invalid': submitted && f.CustomerID.errors}"
+                           formControlName="CustomerID" pInputText>
+                        
+                </div>
+                <label class="control-label col-sm-1" for="FullName">客戶名稱</label>
+                <div class="col-sm-3">
+                    <input type="text" id="FullName" placeholder="請輸入客戶名稱"
+                           [ngClass]="{'is-invalid': submitted && f.FullName.errors}"
+                           formControlName="FullName" pInputText>
+                </div>
+                <label class="control-label col-sm-1" for="StopMark">客戶狀態</label>
+                <div class="col-sm-3">
+                    <p-dropdown id="StopMark" [options]="stopmarks" [(ngModel)]="selectedStopMark" placeholder="請選擇狀態" optionLabel="name" [showClear]="true"
+                    [ngClass]="{'is-invalid': submitted && f.StopMark.errors}"
+                    formControlName="StopMark"></p-dropdown>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="VIP">重點客戶</label>
+                <div class="col-sm-3">
+                    <p-dropdown id="VIP" [options]="vips" [(ngModel)]="selectedVIP" placeholder="請選擇" optionLabel="name" [showClear]="true"
+                    [ngClass]="{'is-invalid': submitted && f.VIP.errors}"
+                    formControlName="VIP"></p-dropdown>
+                </div>
+                <label class="control-label col-sm-1" for="Listed">上市櫃公司</label>
+                <div class="col-sm-3">
+                    <p-dropdown id="Listed" [options]="lists" [(ngModel)]="selectedListed" placeholder="請選擇" optionLabel="name" [showClear]="true"
+                    [ngClass]="{'is-invalid': submitted && f.Listed.errors}"
+                    formControlName="Listed"></p-dropdown>
+                </div>
+                <label class="control-label col-sm-1" for="ServiceField">產業別</label>
+                <div class="col-sm-3">
+                    <p-multiSelect styleClass="pr-ng-select" id="ServiceField" [options]="servicefields" [(ngModel)]="selectedServiceField" defaultLabel="請選擇" optionLabel="name"
+                     [ngClass]="{'is-invalid': submitted && f.ServiceField.errors}"
+                    formControlName="ServiceField"></p-multiSelect>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="Rank">客戶分級</label>
+                <div class="col-sm-3">
+                    <p-dropdown id="Rank" [options]="ranks" [(ngModel)]="selectedRank" placeholder="請選擇" optionLabel="name" [showClear]="true"
+                    [ngClass]="{'is-invalid': submitted && f.Rank.errors}"
+                    formControlName="Rank"></p-dropdown>
+                </div>
+                <label class="control-label col-sm-1" for="RegionType">地區選項</label>
+                <div class="col-sm-3">
+                    <p-dropdown id="RegionType" [options]="regiontype" [(ngModel)]="selectedRegionType" placeholder="請選擇" optionLabel="label" [showClear]="true"
+                    [ngClass]="{'is-invalid': submitted && f.RegionType.errors}"
+                    formControlName="RegionType"></p-dropdown>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="Country">國家</label>
+                <div class="col-sm-3">
+                    <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" [showClear]="true"
+                    placeholder="請選擇" id="Country"
+                    [ngClass]="{'is-invalid': submitted && f.Country.errors}"
+                    formControlName="Country">
+                        <ng-template pTemplate="selectedItem">
+                            <div class="country-item country-item-value" *ngIf="selectedCountry">
+                                <div>{{selectedCountry.name}}</div>
+                            </div>
+                        </ng-template>
+                        <ng-template let-country pTemplate="item">
+                            <div class="country-item">
+                                <div>{{country.value.name}}</div>
+                            </div>
+                        </ng-template>
+                    </p-dropdown>
+                </div>
+                <label class="control-label col-sm-1" for="LiaisonName">聯絡人</label>
+                <div class="col-sm-3">
+                    <input type="text" id="LiaisonName" placeholder="請輸入聯絡人名稱"
+                           [ngClass]="{'is-invalid': submitted && f.LiaisonName.errors}"
+                           formControlName="LiaisonName" pInputText>
+                </div>
+                <label class="control-label col-sm-1" for="SalesTeam">組別</label>
+                <div class="col-sm-3">
+                    <p-dropdown [options]="salesteam" [(ngModel)]="selectedSalesTeam" optionLabel="name" [filter]="true" [showClear]="true"
+                    placeholder="請選擇" id="SalesTeam"
+                    [ngClass]="{'is-invalid': submitted && f.SalesTeam.errors}"
+                    formControlName="SalesTeam">
+                    </p-dropdown>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="CompTaxNo">統一編號</label>
+                <div class="col-sm-3">
+                    <input type="number" min=1 step=1
+                           id="CompTaxNo" placeholder="請輸入統一編號"
+                           [ngClass]="{'is-invalid': submitted && f.CompTaxNo.errors}"
+                           formControlName="CompTaxNo" pInputText>
+                </div>
+                <label class="control-label col-sm-1" for="Tel">聯絡電話</label>
+                <div class="col-sm-3">
+                    <input type="number" min=1 step=1
+                           id="Tel" placeholder="請輸入聯絡電話"
+                           [ngClass]="{'is-invalid': submitted && f.Tel.errors}"
+                           formControlName="Tel" pInputText>
+                </div>
+                <label class="control-label col-sm-1" for="Creator">建檔人員</label>
+                <div class="col-sm-3">
+                    <input type="text" id="Creator" placeholder="請輸入建檔人員"
+                           [ngClass]="{'is-invalid': submitted && f.Creator.errors}"
+                           formControlName="Creator" pInputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1" for="CompTaxNo2">稅籍編號</label>
+                <div class="col-sm-3">
+                    <input type="text" id="CompTaxNo2" placeholder="請輸入稅籍編號"
+                           [ngClass]="{'is-invalid': submitted && f.CompTaxNo2.errors}"
+                           formControlName="CompTaxNo2" pInputText>
+                </div>
+                <label class="control-label col-sm-1" for="Email">電子郵件</label>
+                <div class="col-sm-3">
+                    <input type="email" id="Email" placeholder="請輸入電子郵件"
+                           [ngClass]="{'is-invalid': submitted && f.Email.errors}"
+                           formControlName="Email" pInputText>
+                    <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+                        <div *ngIf="f.Email.errors.pattern">Email 格式有誤</div>
+                    </div>
+                </div>
+                <label class="control-label col-sm-1" for="CreateDate">建檔日期</label>
+                <div class="col-sm-3">
+                    <datepicker-minmax [DatePicker]="searchForm.get('Picker')"
+                                       [DatePicker2]="searchForm.get('Picker2')"></datepicker-minmax>
+                </div>
+            </div>
+            <div class="btn-container">
+                <div *ngIf="!valid"><b class="text-danger">請至少填寫一個條件</b></div>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>送出查詢</button>
+                <button type="reset" class="btn btn-danger"><i class="fa  fa-times"></i>清除查詢</button>
+            </div>
+        </form>
+    </div>
+    <!-- 查詢條件面板 END -->
+
+    <!-- 查詢結果面板 START -->
+    <div class="result-container">
+        <div class="title">
+            <i class="fa fa-group"></i>
+            <span>查詢結果</span>
+        </div>
+        <div class="add-btn-container">
+            <a routerLink="new-customer">
+                <button type="button" class="btn btn-success"><i
+                        class="fa  fa-plus"></i>新增客戶
+                </button>
+            </a>
+            <a routerLink="new-quotation">
+                <button type="button" class="btn btn-success btn-quo"><i
+                        class="fa  fa-pencil"></i>新增估價單
+                </button>
+            </a>
+        </div>
+
+        <!-- PrimeNG Table START -->
+        <p-table #dt [columns]="cols" [value]="customers" [paginator]="true" [scrollable]="true" [rows]="10"
+                 [(selection)]="selectedCustomers" [resizableColumns]="true" [style]="{width: '100%'}"
+                 [showCurrentPageReport]="true" 
+                 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+                 [rowsPerPageOptions]="[10,20,30]"
+                 styleClass="p-datatable-customers">
+            <ng-template pTemplate="colgroup" let-columns>
+                <colgroup>
+                    <col *ngFor="let col of columns" [style.width]="col.width">
+                </colgroup>
+            </ng-template>
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th *ngFor="let col of columns">
+                        {{col.header | i18n }}
+                    </th>
+                </tr>
+                <tr>
+                    <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                        <div style="width: 60px" *ngSwitchCase="'select'"></div>
+                        <input *ngSwitchCase="'CustomerID'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <input *ngSwitchCase="'FullName'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <input *ngSwitchCase="'FLFullName'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <input *ngSwitchCase="'CompTaxNo'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <input *ngSwitchCase="'Tel'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <input *ngSwitchCase="'Address'" pInputText type="text"
+                               (input)="dt.filter($event.target.value, col.field, 'contains')">
+                        <p-dropdown *ngSwitchCase="'StopMark'" [showClear]="true" [options]="stopmark"
+                                    (onChange)="dt.filter($event.value, col.field, 'equals')"></p-dropdown>
+                        <p-dropdown *ngSwitchCase="'RegionType'" [showClear]="true" [options]="regiontype"
+                                    (onChange)="dt.filter($event.value, col.field, 'equals')"></p-dropdown>
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr>
+                    <td *ngFor="let col of columns" class="ui-resizable-column">
+                        <ng-container *ngIf="col.field == 'select'">
+                    <td>
+                        <p-tableRadioButton [value]="rowData"></p-tableRadioButton>
+                    </td>
+                    </ng-container>
+                    <ng-container *ngIf="col.field == 'CustomerID'">
+                        <a routerLink="/saleswork/customer/customer-info">
+                            {{rowData[col.field]}}
+                        </a>
+                    </ng-container>
+                    <ng-container *ngIf="col.field !== 'CustomerID'">
+                        {{rowData[col.field]}}
+                    </ng-container>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+        <!-- PrimeNG Table END -->
+    </div>
+    <!-- 查詢結果面板 END -->
+</div>

@@ -1,0 +1,202 @@
+<!-- MAIN CONTENT -->
+<div id="content">
+  <div class="row">
+    <sa-big-breadcrumbs [items]="['業務作業', '信用卡訂購單']" icon="briefcase" class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+    </sa-big-breadcrumbs>
+  </div>
+  <!-- 查詢條件面板 START -->
+  <div class="condition-container">
+    <div class="title">
+      <i class="fa fa-group"></i>
+      <span>估價單查詢</span>
+    </div>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="QuotID">估價單號</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="QuotID" placeholder="請輸入估價單號">
+          </div>
+          <label class="control-label col-sm-1" for="BillStatus">估價單狀態</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="BillStatus">
+              <option selected>請選擇</option>
+              <option>已估價</option>
+              <option>已估價和已成交</option>
+              <option>已結案</option>
+              <option>已成交</option>
+            </select>
+          </div>
+          <label class="control-label col-sm-1" for="QuotDate">估價日期</label>
+          <div class="col-sm-3">
+            <datepicker-minmax></datepicker-minmax>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="CustomerID">客戶編號</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="CustomerID" placeholder="請輸入客戶編號">
+          </div>  
+          <label class="control-label col-sm-1" for="FullName">客戶名稱</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="FullName" placeholder="請輸入客戶名稱">
+          </div>
+          <label class="control-label col-sm-1" for="Tel">客戶電話</label>
+          <div class="col-sm-3">          
+            <input type="text" class="form-control" id="Tel" placeholder="請輸入客戶電話">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="Original">交易主體公司名稱</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="Original">
+              <option selected>請選擇</option>
+              <option>統一數位翻譯股份有限公司</option>
+              <option>統一數位翻譯股份有限公司高雄分公司</option>
+              <option>統一翻譯社</option>
+            </select>
+          </div>
+          <label class="control-label col-sm-1" for="LiaisonName">聯絡人</label>
+          <div class="col-sm-3">          
+            <input type="text" class="form-control" id="LiaisonName" placeholder="請輸入聯絡人名稱">
+          </div>
+          <label class="control-label col-sm-1" for="CellPhone">行動電話</label>
+          <div class="col-sm-3">          
+            <input type="text" class="form-control" id="CellPhone" placeholder="請輸入行動電話">
+          </div>
+        </div>
+        <div class="form-group"> 
+          <label class="control-label col-sm-1" for="Email">電子郵件</label>
+          <div class="col-sm-3">          
+            <input type="text" class="form-control" id="Email" placeholder="請輸入電子郵件">
+          </div>
+          <label class="control-label col-sm-1" for="InsteadPayBillCurr">代付款項金額</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="InsteadPayBillCurr">
+              <option>有</option>
+              <option>無</option>
+            </select>            
+          </div>
+        </div>  
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="EnglishName">業務人員</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="EnglishName">
+              <option selected>請選擇</option>
+              <option>test1</option>
+              <option>test2</option>
+              <option>test3</option>
+            </select>
+          </div>
+          <label class="control-label col-sm-1" for="SalesTeam">組別</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="SalesTeam">
+              <option selected>請選擇</option>
+              <option>test1</option>
+              <option>test2</option>
+              <option>test3</option>
+            </select>            
+          </div>
+          <label class="control-label col-sm-1" for="RegionType">地區選項</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="RegionType">
+              <option>TW</option>
+              <option>CN</option>
+            </select>            
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="FromLanguage">原文</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="FromLanguage">
+              <option selected>請選擇</option>
+              <option>English</option>
+              <option>Chinese(Traditional)</option>
+              <option>Chinese(Simplified)</option>
+              <option>Japanese</option>
+              <option>Spanish</option>
+            </select>
+          </div>
+          <label class="control-label col-sm-1" for="ToLanguage">譯文</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="ToLanguage">
+              <option selected>請選擇</option>
+              <option>English</option>
+              <option>Chinese(Traditional)</option>
+              <option>Chinese(Simplified)</option>
+              <option>Japanese</option>
+              <option>Spanish</option>
+            </select>
+          </div>
+          <label class="control-label col-sm-1" for="ServiceType">服務別</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="ServiceType">
+              <option selected>請選擇</option>
+              <option>test1</option>
+              <option>test2</option>
+              <option>test3</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="MatlDescpDomestic">文件名稱</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="MatlDescpDomestic" placeholder="請輸入文件名稱">
+          </div>
+          <label class="control-label col-sm-1" for="FileClass">文件類別</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="FileClass">
+              <option selected>請選擇</option>
+              <option>test1</option>
+              <option>test2</option>
+              <option>test3</option>
+            </select>
+          </div>
+          <label class="control-label col-sm-1" for="FileType">文件型別</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="FileType">
+              <option selected>請選擇</option>
+              <option>test1</option>
+              <option>test2</option>
+              <option>test3</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="ProductType">產品</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="ProductType">
+              <option selected>請選擇</option>
+              <option>test1</option>
+              <option>test2</option>
+              <option>test3</option>
+            </select>  
+          </div>
+          <label class="control-label col-sm-1" for="BrandName">品牌</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="BrandName">
+              <option selected>請選擇</option>
+              <option>test1</option>
+              <option>test2</option>
+              <option>test3</option>
+            </select>  
+          </div>
+          <label class="control-label col-sm-1" for="Source">來源</label>
+          <div class="col-sm-3">
+            <select type="text" class="form-control" id="Source">
+              <option selected>請選擇</option>
+              <option>線上估價</option>
+              <option>一括</option>
+            </select>  
+          </div>
+        </div>  
+        <div class="btn-container">
+        <a routerLink="new-quotation"><button type="button" class="btn btn-success"><i class="fa  fa-plus"></i>新增估價單</button></a>
+        <div class="btn-container-right">
+          <button type="button" class="btn btn-primary"><i class="fa fa-search"></i>送出查詢</button>
+          <button type="button" class="btn btn-danger"><i class="fa  fa-times"></i>清除查詢</button>
+        </div> 
+      </div>
+      </form>
+  </div>
+</div>
+  

@@ -1,0 +1,65 @@
+{
+    "data" : [
+       {
+        "no":"1",
+        "ApplyType": "銷款報告書",
+        "ApplyDate": "2020-09-10",
+        "Department": "業務部",
+        "EnglishName": "李曉明",
+        "Update": "2020-09-23 22:31:10",
+        "ApprovalStatus": "待審核",
+        "status": "1"
+       },
+       {
+        "no":"2",
+        "ApplyType": "銷款報告書",
+        "ApplyDate": "2020-09-10",
+        "Department": "業務部",
+        "EnglishName": "蔣剛育",
+        "Update": "2020-09-25 14:35:19",
+        "ApprovalStatus": "待審核",
+        "status": "1"
+       },
+       {
+        "no":"3",
+        "ApplyType": "其他單據1",
+        "ApplyDate": "2020-09-10",
+        "Department": "業務部",
+        "EnglishName": "吳詠萱",
+        "Update": "2020-09-24 13:18:23",
+        "ApprovalStatus": "待審核",
+        "status": "1"
+       },
+       {
+        "no":"4",
+        "ApplyType": "其他單據2",
+        "ApplyDate": "2020-09-10",
+        "Department": "業務部",
+        "EnglishName": "宋沛泉",
+        "Update": "2020-09-18 16:11:30",
+        "ApprovalStatus": "已核准",
+        "status": "2"
+       },
+       {
+        "no":"5",
+        "ApplyType": "其他單據3",
+        "ApplyDate": "2020-09-10",
+        "Department": "業務部",
+        "EnglishName": "陳建瑋",
+        "Update": "2020-09-21 13:14:20",
+        "ApprovalStatus": "已退單",
+        "status": "3"
+       },
+       {
+        "no":"6",
+        "ApplyType": "銷款報告書",
+        "ApplyDate": "2020-09-10",
+        "Department": "業務部",
+        "EnglishName": "張智順",
+        "Update": "2020-09-19 13:36:11",
+        "ApprovalStatus": "已核准",
+        "status": "2"
+       }
+       
+    ]
+}

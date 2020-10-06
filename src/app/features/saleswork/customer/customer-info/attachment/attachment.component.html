@@ -1,0 +1,104 @@
+<div class="attachment-container">
+    <div class="attachment-content">
+      <div class="top-row">
+          <div class="sub-title">
+              <i class="fa fa-cloud-upload"></i>
+              <h3>附件上傳</h3>
+          </div>
+          <div class="btn-container">
+              <button type="button" class="btn btn-success btn-margin-right" (click)="pop_show()"><i class="fa  fa-plus"></i>新增附件</button>
+              <button type="button" class="btn btn-primary"><i class="fa  fa-download"></i>檔案下載</button>
+          </div>
+      </div>
+      <p-treeTable [value]="files5" [columns]="cols">
+          <ng-template pTemplate="header" let-columns>
+              <tr>
+                  <th *ngFor="let col of columns">
+                      {{col.header}}
+                  </th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-rowNode let-rowData="rowData" let-columns="columns">
+              <tr>
+                  <td *ngFor="let col of columns; let i = index">
+                      <p-treeTableToggler [rowNode]="rowNode" *ngIf="i == 0"></p-treeTableToggler>
+                      <p-treeTableCheckbox [value]="rowNode" *ngIf="i == 0"></p-treeTableCheckbox>
+                      {{rowData[col.field]}}
+                  </td>
+              </tr>
+          </ng-template>
+          <!-- <ng-template pTemplate="summary">
+              <div style="text-align: left">
+                  Selected Nodes: <span *ngIf="!selectedNodes3 || selectedNodes3.length === 0" style="font-weight: normal">none</span>
+                  <ul *ngIf="selectedNodes3 && selectedNodes3.length">
+                      <li *ngFor="let node of selectedNodes3">
+                          <span style="font-weight: normal">{{node.data.name + ' - ' + node.data.size + ' - ' + node.data.type}}</span>
+                      </li>
+                  </ul>
+              </div>
+          </ng-template> -->
+      </p-treeTable>
+    </div> 
+</div>
+
+<!-- pop視窗 -->
+<div class="pop-wrapper">
+    <form class="form-horizontal">
+        <div class="form-group sub-title-container">
+            <div class="sub-title">
+                <i class="fa  fa-file-text"></i>
+                <h3>新增附件</h3>
+            </div>
+            <div>
+                <i class="fa  fa-times fa-times-lg" (click)="pop_hide();"></i>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="update" >上傳類別</label>
+            <div class="col-sm-10">
+                <select type="text" class="form-control" id="update">
+                  <option selected>請選擇上傳類別</option>
+                  <option>付款營業登記證</option>
+                  <option>合約</option>
+                  <option>Coupon(折價券）</option>
+                  <option>翻譯師資料/CV</option>
+                  <option>其他</option>
+                </select> 
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Liaison">檔案選擇</label>
+          <div class="col-sm-10">
+            <input type="file" id="exampleInputFile">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Liaison">上傳日期</label>
+          <div class="col-sm-10">
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" disabled [formControl]="serializedDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Liaison" >上傳者</label>
+          <div class="col-sm-10">
+            <input class="builder-name" type="text" value="Penny"  disabled="disabled">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Liaison" >檔案備註</label>
+          <div class="col-sm-10">
+            <textarea rows="5"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+            <div>
+                <button type="button" class="btn btn-success btn-margin-right"><i class="fa  fa-check"></i>確認新增</button>
+                <button type="button" class="btn btn-danger btn-margin-right"><i class="fa  fa-times"></i>取消新增</button>
+            </div>
+        </div>
+    </form>  
+</div>

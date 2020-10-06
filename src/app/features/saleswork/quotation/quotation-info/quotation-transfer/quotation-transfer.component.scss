@@ -1,0 +1,53 @@
+.quo-transfer-container{
+    background-color: #fff;
+    padding: 20px;
+}
+
+.btn-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.mat-form-field{
+    width: 100%;
+    max-width: 200px;
+}
+.add-button{
+    margin-left: 10px;
+}
+.sub-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pop-wrapper{
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #bbb;
+    form{
+        padding: 20px;
+        padding-right: 30px;
+    }
+    .form-group{
+        display: flex;
+        margin-right: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+    .sub-title{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        width: 100%;
+    }
+    .sub-title-container{
+        justify-content: space-between;
+        align-items: center;
+    }
+}

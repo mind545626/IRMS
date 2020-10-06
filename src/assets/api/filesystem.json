@@ -1,0 +1,102 @@
+{
+  "data":
+  [  
+      {  
+          "data":{  
+              "name":"付款營業登記證 (1)",
+              "size":"500kb",
+              "type":"Folder"
+          },
+          "children":[  
+              {  
+                  "data":{  
+                      "name":"營業登記證.pdf",
+                      "size":"500kb",
+                      "type":"PDF"
+                  }
+              }
+          ]
+      },
+      {  
+          "data":{  
+              "name":"合約 (1)",
+              "size":"800kb",
+              "type":"Folder"
+          },
+          "children":[  
+              {  
+                  "data":{  
+                      "name":"contract-1.zip",
+                      "size":"800kb",
+                      "type":"Zip"
+                  }
+              }
+          ]
+      },
+      {  
+          "data": {  
+              "name":"Coupon（折價券）(2)",
+              "size":"150kb",
+              "type":"Folder"
+          },
+          "children":[  
+              {  
+                  "data":{  
+                      "name":"coupon-1.pdf",
+                      "size":"50kb",
+                      "type":"PDF"
+                  }
+              },
+              {  
+                  "data":{  
+                      "name":"coupon-2.pdf",
+                      "size":"100kb",
+                      "type":"PDF"
+                  }
+              }
+          ]
+      },
+      {  
+          "data":{  
+              "name":"翻譯師資料/CV (2)",
+              "size":"5mb",
+              "type":"Folder"
+          },
+          "children":[
+               {
+                  "data":{  
+                      "name":"翻譯師資料.zip",
+                      "size":"2mb",
+                      "type":"Zip"
+                  }
+              },
+              {  
+                  "data":{  
+                      "name":"翻譯師履歷.zip",
+                      "size":"3mb",
+                      "type":"Zip"
+                  }
+              }
+  
+          ]
+      },
+      {  
+          "data": {  
+              "name":"其他 (1)",
+              "size":"100kb",
+              "type":"Folder"
+          },
+          "children":[  
+  
+              {  
+                  "data":{  
+                      "name":"備忘錄",
+                      "size":"100kb",
+                      "type":"Text"
+                  }
+              }
+                 
+          ]
+      }
+  ]
+}

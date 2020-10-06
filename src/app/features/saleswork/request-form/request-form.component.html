@@ -1,0 +1,702 @@
+<div id="content">
+  <div class="row">
+    <sa-big-breadcrumbs [items]="['業務作業', '需求表填寫']" icon="briefcase" class="col-sm-6 col-md-6 col-lg-6 align-middle">
+    </sa-big-breadcrumbs>
+  </div>
+  <mat-tab-group mat-align-tabs="start">
+    <!-- 聯絡人資料頁籤內容 -->
+    <mat-tab label="筆譯需求表">
+      <div class="request-container">
+        <div class="btn-container">
+          <button type="button" class="btn btn-warning btn-margin-right"><i class="fa  fa-print"></i>預覽列印</button>
+          <button type="button" class="btn btn-primary btn-margin-right"><i class="fa fa-send"></i>發送Email</button>
+        </div>
+        <div class="request-content">
+          <div class="top-row">
+            <h2>筆譯需求表</h2>
+            <div class="detail">
+              <p>填表業務：Shane</p>
+              <p>填表日期:2020/08/20</p>
+            </div>
+          </div>
+          <form>
+            <h3>客戶基本資料</h3>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>客戶類型</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="type_select">
+                  舊客戶
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="type_select">
+                  新客戶
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="type_select">
+                  三年以上未交易客戶
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>客戶編號</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <input type="text" class="form-control">
+                </div>
+                <button type="button" class="btn btn-warning  col-sm-2">套用客戶資料</button>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>客戶名稱</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label>統一/稅籍編號</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label>股票代號</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label>主要產品</label>
+              <div class="row">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label>客戶所在國家/城市</label>
+              <div class="row">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>客戶是否為國際型公司</label>
+              <span class="tips-text">(信件副本給Lili/Rongrong)</span>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="form_video">
+                  是
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="form_video">
+                  否
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label>客戶網站</label>
+              <div class="row">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <h3>客戶聯絡資料</h3>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>聯絡人</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>聯絡人電話</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>聯絡人信箱</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <h3>主要需求</h3>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>文件類型</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label>文件的end-user</label>
+              <span class="tips-text">(翻譯同業的文件才需填寫此欄)</span>
+              <div class="row">
+                <label class="col-sm-2 text-right">公司名稱：</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <label class="col-sm-2 text-right">網址：</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <label>特殊需求</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="col-sm-8">
+                  <input  class="form-control" type="input">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>是否已有合作供應商</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="form_cooperation">
+                  是
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="form_cooperation">
+                  否
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>客戶是否看過video</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="form_video">
+                  是
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="form_video">
+                  否
+                </label>
+              </div>
+            </div>
+            <h3>GDP/GTAIS Matrix進出價成本分析表（台幣）</h3>
+            <div class="form-item">
+              <div class="row">
+                <label  class="col-sm-2">需求語言別</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+                <label  class="col-sm-2">客戶所在地</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="row">
+                <label  class="col-sm-2">台灣GDP</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+                <label  class="col-sm-2">客戶所在地GDP</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="row">
+                <label  class="col-sm-2">Matrix(GTAIS)全球最近30筆譯費最低單價</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="row">
+                <label  class="col-sm-2">Matrix(GTAIS)客戶所在國家成交平均單價</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+                <label  class="col-sm-2">Matrix(GTAIS)客戶所在國家譯費中位數</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="row">
+                <label  class="col-sm-2">Sales預計報價（單價）</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input" disabled="disabled">
+                </div>
+                <label  class="col-sm-2">Assigner預計成本（單價）</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input" disabled="disabled">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="口譯需求表">
+      <div class="request-container">
+        <div class="btn-container">
+          <button type="button" class="btn btn-warning btn-margin-right"><i class="fa  fa-print"></i>預覽列印</button>
+          <button type="button" class="btn btn-primary btn-margin-right"><i class="fa fa-send"></i>發送Email</button>
+        </div>
+        <div class="request-content">
+          <div class="top-row">
+            <h2>口譯需求表</h2>
+            <div class="detail">
+              <p>填表業務：Shane</p>
+              <p>填表日期:2020/08/20</p>
+            </div>
+          </div>
+          <form>
+            <h3>客戶基本資料</h3>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>客戶編號</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <input type="text" class="form-control">
+                </div>
+                <button type="button" class="btn btn-warning  col-sm-2">套用客戶資料</button>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>客戶名稱</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label>統一/稅籍編號</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label>客戶網站</label>
+              <div class="row">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>聯絡人</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>聯絡人電話</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>聯絡人信箱</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <h3>主要需求</h3>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>原始語言</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>目標語言</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>類型</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="type_select">
+                  同步口譯
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="type_select">
+                  逐步/隨行口譯
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="type_select">
+                  展場口譯
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>日期/時間</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>地點</label>
+              <div class="row">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label><span class="must-icon">*</span>客戶預算</label>
+              <div class="row">
+                <label class="col-sm-2 text-right">口譯費：</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <label class="col-sm-2 text-right">車資：</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <label class="col-sm-2 text-right">住宿：</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control">
+                </div>
+              </div> 
+            </div>
+            <h3>其他需求</h3>
+            <div class="form-item">
+              <label>與會人數</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <select class="form-control">
+                    <option selected>請選擇人數</option>
+                    <option>1~4人</option>
+                    <option>5～10人</option>
+                    <option>11~20人</option>
+                    <option>21~30人</option>
+                    <option>31~40人</option>
+                    <option>41~50人</option>
+                    <option>50人以上</option>
+                  </select>
+                </div>
+              </div> 
+            </div>
+            <div class="form-item">
+              <label>口譯師是否需上台</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quenstion_10">
+                  是
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quenstion_10" id="Q10_answer2">
+                  否
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label>口譯是否會錄音、攝影、網路直播</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quenstion_10" id="Q10_answer1">
+                  是
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quenstion_10" id="Q10_answer2">
+                  否
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label>面試和會前會需求</label>
+              <div class="radio" id="interview_select">
+                <label>
+                  <input type="radio" name="form_interview"  value="1">
+                  需要（需另收費用）
+                </label>
+              </div>
+              <div class="radio sub-select">
+                <label class="radio-inline">
+                  <input type="radio" name="form_sub_interview">
+                  電話
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="form_sub_interview">
+                  Skype
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="form_sub_interview">
+                  親洽
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="form_sub_interview">其他
+                  <input type="input">
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="form_interview" value="2">
+                  不需要
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label>參考資料</label>
+              <div class="radio form-inline">
+                <div class="form-gruop">
+                  <label>
+                    <input type="radio" name="quenstion_11" id="Q11_answer1">
+                    有，資料共有
+                  </label>
+                </div>
+                <div class="form-gruop">
+                  <label>
+                    <select class="form-control">
+                      <option selected>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>份
+                  </label>
+                </div>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quenstion_11" id="Q11_answer2">
+                  無
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label>口譯是否會錄音、攝影、網路直播</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quenstion_10" id="Q10_answer1">
+                  是
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quenstion_10" id="Q10_answer2">
+                  否
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label>是否有服裝儀容要求？</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quenstion_10" id="Q10_answer1">
+                  否
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quenstion_10" id="Q10_answer2">
+                  是，請穿著簡單俐落、乾淨清爽為原則，切忌顏色花俏鮮豔誇張。
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="quenstion_10" id="Q10_answer2">
+                  是，男生請穿著長袖正式襯衫、打領帶、西裝褲，如有需要請穿著西裝外套;
+                  女生請穿著OL正式褲裝or裙裝，如有需要時請化淡妝。
+                </label>
+              </div>
+              <div class="radio">
+                <label class="dress-memo">
+                  <input type="radio" name="quenstion_10" id="Q10_answer2">其他
+                  <textarea class="form-control" rows="2"></textarea>
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label>是否提供CV</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="form_cv" value="1">
+                  是
+                </label>
+              </div>
+              <div class="radio sub-select">
+                <label class="radio-inline">
+                  <input type="radio" name="form_sub_cv">
+                  中文
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="form_sub_cv">
+                  英文
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="form_sub_cv">其他
+                  <input type="input">
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="form_cv" value="2">
+                  否
+                </label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label>其他需求/備註</label>
+              <span class="tips-text">如：口譯師性別、年齡、專業背景</span>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <h3>GDP/GTAIS Matrix進出價成本分析表（台幣）</h3>
+            <div class="form-item">
+              <div class="row">
+                <label  class="col-sm-2">需求語言別</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+                <label  class="col-sm-2">客戶所在地</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="row">
+                <label  class="col-sm-2">台灣GDP</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+                <label  class="col-sm-2">客戶所在地GDP</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="row">
+                <label  class="col-sm-2">Matrix(GTAIS)全球最近30筆譯費最低單價</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="row">
+                <label  class="col-sm-2">Matrix(GTAIS)客戶所在國家成交平均單價</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+                <label  class="col-sm-2">Matrix(GTAIS)客戶所在國家譯費中位數</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input">
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="row">
+                <label  class="col-sm-2">Sales預計報價（單價）</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input" disabled="disabled">
+                </div>
+                <label  class="col-sm-2">Assigner預計成本（單價）</label>
+                <div class="col-sm-4">
+                  <input  class="form-control" type="input" disabled="disabled">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

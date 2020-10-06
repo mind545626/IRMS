@@ -1,0 +1,76 @@
+form{
+    padding: 20px;
+    padding-right: 30px;
+}
+.form-group{
+    display: flex;
+    margin-right: 0;
+    margin-left: 0;
+}
+.fa-group{
+    margin: 0 5px 0 10px;
+}
+.fa{
+    margin-right: 10px;
+}
+.btn{
+    &-margin-right{
+        margin-right: 10px;
+    }
+    &-margin-btm{
+        margin-bottom: 20px;
+    }
+    &-right{
+        text-align: right;
+    }
+}
+.title{
+    display: flex;
+    align-items: center;
+    height: 34px;
+    color: #fff;
+    background-color: #8DB6B2;
+}
+
+.liaison-container{
+    margin: 0 0 30px;
+    width: 100%;
+    min-height: 150px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.add-btn-container{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.pop-wrapper{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #bbb;
+    .form-group{
+        justify-content: center;
+    }
+    .sub-title{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        width: 100%;
+    }
+    .sub-title-container{
+        justify-content: space-between;
+        align-items: center;
+    }
+}

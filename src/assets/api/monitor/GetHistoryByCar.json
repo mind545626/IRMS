@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "Car_Plate": "ABC-1234",
+            "StartTime": "2020-05-01 00:00:00.000",
+            "EndTime": "2020-05-25 00:00:00.000",
+            "Token": "00120200506001200",
+            "Amount": 2,
+            "Details": [
+                {
+                    "CCTVID": "YL0912001-D001",
+                    "Car_Plate": "ABC-1234",
+                    "TransactionTime": "2020-05-10 09:34:11.211",
+                    "Direction": "南",
+                    "CarType": "",
+                    "CarColor": "",
+                    "Latitude": "24.98166667",
+                    "Longitude": "121.9523889"
+                },
+                {
+                    "CCTVID": "YL0912001-D001",
+                    "Car_Plate": "ABC-1234",
+                    "TransactionTime": "2020-05-10 19:30:11.211",
+                    "Direction": "南",
+                    "CarType": "",
+                    "CarColor": "",
+                    "Latitude": "24.98166667",
+                    "Longitude": "121.9523889"
+                }
+            ]
+        },
+        {
+            "Car_Plate": "CNA-777",
+            "StartTime": "2020-05-01 00:00:00.000",
+            "EndTime": "2020-05-25 00:00:00.000",
+            "Token": "00120200506001200",
+            "Amount":  1,
+            "Details": [
+                {
+                    "CCTVID": "YL0912001-D001",
+                    "Car_Plate": "CNA-777",
+                    "TransactionTime": "2020-05-10 09:34:11.211",
+                    "Direction": "南",
+                    "CarType": "",
+                    "CarColor": "",
+                    "Latitude": "24.98166667",
+                    "Longitude": "121.9523889"
+                }
+            ]
+        }
+    ]
+}

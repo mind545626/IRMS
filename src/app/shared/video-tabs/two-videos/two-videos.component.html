@@ -1,0 +1,16 @@
+
+  <div class="panel-body">
+    <div class="col-xs-12 col-md-6" *ngFor="let item of obs | async">
+        <div>
+            <p>攝影機名稱：{{item.name}}</p>
+            <p>攝影機編號：{{item.camid}}</p>
+        </div>
+        <div>
+            <img src="http://220.228.148.247:10000/video.cgi?profilename=Profile4" class="cctv" frameborder="0"
+                width="90%" height="80%" scrolling="no" />
+            <!-- <img src="http://113.196.103.28:7001/media/{{item.camid}}.mp4?resolution=640x480" class="cctv" frameborder="0" width="90%" height="80%"
+                scrolling="no" /> -->
+        </div>
+    </div>
+</div>
+<mat-paginator #paginator="matPaginator" [pageSizeOptions]="paginationPageSizes"></mat-paginator>

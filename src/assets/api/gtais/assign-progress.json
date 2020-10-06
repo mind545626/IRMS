@@ -1,0 +1,138 @@
+{
+    "data": [
+        {
+            "no": "1",
+            "data": {
+                "OrderNo":"WWW09123",
+                "OrderDate": "",
+                "AssignerDeliverDate": "",
+                "CustomerID": "223186",
+                "CustomerName": "本人元股份有限公司",
+                "AssignProgress": "",
+                "AssignWords": "35,300",
+                "AssignerName": ""
+            },
+            "children":[
+                {
+                    "data":{
+                        "OrderNo":"WWW09123-1",
+                        "OrderDate": "2020-07-12",
+                        "AssignerDeliverDate": "2020-08-18",
+                        "CustomerID": "223186",
+                        "CustomerName": "本人元股份有限公司",
+                        "AssignProgress": "尚未指派",
+                        "AssignWords": "8,600",
+                        "AssignerName": "",
+                        "status": "1"
+                    }
+                    
+                },
+                {
+                    "data":{
+                        "OrderNo":"WWW09123-2",
+                        "OrderDate": "2020-07-12",
+                        "AssignerDeliverDate": "2020-08-18",
+                        "CustomerID": "223186",
+                        "CustomerName": "本人元股份有限公司",
+                        "AssignProgress": "已指派組員",
+                        "AssignWords": "3,800",
+                        "AssignerName": "Ellen",
+                        "status": "2"
+                    }
+                    
+                },
+                {
+                    "data":{
+                        "OrderNo":"WWW09123-3",
+                        "OrderDate": "2020-07-12",
+                        "AssignerDeliverDate": "2020-08-18",
+                        "CustomerID": "223186",
+                        "CustomerName": "本人元股份有限公司",
+                        "AssignProgress": "已指派翻譯師",
+                        "AssignWords": "4,000",
+                        "AssignerName": "Ken",
+                        "status": "3"
+                    }
+                    
+                },
+                {
+                    "data":{
+                        "OrderNo":"WWW09123-4",
+                        "OrderDate": "2020-07-12",
+                        "AssignerDeliverDate": "2020-08-18",
+                        "CustomerID": "223186",
+                        "CustomerName": "本人元股份有限公司",
+                        "AssignProgress": "指派完成",
+                        "AssignWords": "18,900",
+                        "AssignerName": "Shelly",
+                        "status": "4"
+                    }
+                    
+                }
+
+            ]
+           
+        },
+        {
+            "no":"2",
+            "data": {
+                "OrderNo":"WWW09927",
+                "OrderDate": "2020-08-20",
+                "AssignerDeliverDate": "2020-10-23",
+                "CustomerID": "223186",
+                "CustomerName": "福合股份有限公司",
+                "AssignProgress": "尚未指派",
+                "AssignWords": "20,000",
+                "AssignerName": "",
+                "status": "1"
+            }
+
+        },
+        {
+            "no":"3",
+            "data": {
+                "OrderNo":"WWW09420",
+                "OrderDate": "2020-07-12",
+                "AssignerDeliverDate": "2020-08-18",
+                "CustomerID": "223186",
+                "CustomerName": "廣元股份有限公司",
+                "AssignProgress": "指派完成",
+                "AssignWords": "28,000",
+                "AssignerName": "Dennis",
+                "status": "4"
+            }
+
+        },
+        {
+            "no":"4",
+            "data": {
+                "OrderNo":"WWW09578",
+                "OrderDate": "2020-07-26",
+                "AssignerDeliverDate": "2020-11-21",
+                "CustomerID": "223186",
+                "CustomerName": "裕翔股份有限公司",
+                "AssignProgress": "指派完成",
+                "AssignWords": "28,000",
+                "AssignerName": "Brian",
+                "status": "4"
+            }
+
+        }, 
+        {
+            "no":"5",
+            "data": {
+                "OrderNo":"WWW09542",
+                "OrderDate": "2020-08-04",
+                "AssignerDeliverDate": "2020-10-23",
+                "CustomerID": "223186",
+                "CustomerName": "長興股份有限公司",
+                "AssignProgress": "已指派翻譯師",
+                "AssignWords": "28,000",
+                "AssignerName": "Jane",
+                "status": "3"
+            }
+
+        }
+        
+    ]
+}

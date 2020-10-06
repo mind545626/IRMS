@@ -1,0 +1,271 @@
+<div class="container">
+  <div class="step-container">
+    <div class="step-wrapper">
+      <div class="step-title">
+        <h3 class="title">
+          銷帳審核進度
+        </h3>
+      </div>
+      <div class="step-progress">
+        <p-steps [model]="items"></p-steps>
+      </div>
+    </div>
+    <div class="step-wrapper">
+      <div class="step-title">
+        <div class="step-num">
+          1
+        </div>
+        <h3 class="title">
+          銷帳明細（Sales填寫）
+        </h3>
+      </div>
+      <div class="step-content">
+        <form class="form-horizontal">
+          <h3 class="sub-title">(一）基本資訊填寫</h3>
+          <div class="form-group">
+            <label class="control-label col-sm-1">呈報日期</label>
+            <div class="col-sm-5">
+              <p-calendar [(ngModel)]="date1" [showIcon]="true" inputId="icon"></p-calendar>
+            </div>
+            <label class="control-label col-sm-1">主辦Sales</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID" 
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">類別</label>
+            <div class="col-sm-5">
+              <p-dropdown id="VIP" [options]="types" [(ngModel)]="selectedType" placeholder="請選擇" optionLabel="name" [showClear]="true"
+              formControlName="VIP"></p-dropdown>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">交易單號</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">接件日期</label>
+            <div class="col-sm-5">
+              <p-calendar [(ngModel)]="date2" [showIcon]="true" inputId="icon"></p-calendar>
+            </div>
+            <label class="control-label col-sm-1">交件日期</label>
+            <div class="col-sm-5">
+              <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon"></p-calendar>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">文件內容</label>
+            <div class="col-sm-11">
+              <textarea pInputTextarea rows="5"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">原文</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+            <label class="control-label col-sm-1">譯文</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">原GTAIS字數</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+            <label class="control-label col-sm-1">取消字數</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">翻譯師代碼</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+            <label class="control-label col-sm-1">翻譯師</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">客戶編號</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+            <label class="control-label col-sm-1">客戶名稱</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">Assigner</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+          </div>
+          <h3 class="sub-title">(二）收款明細填寫</h3>
+          <div class="form-group">
+            <label class="control-label col-sm-1">應收金額</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+            <label class="control-label col-sm-1">已收金額</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">短收/折讓金額</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+            <label class="control-label col-sm-1">取消/作廢金額</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">未收餘額</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">刪減或折讓/呆帳損失原因</label>
+            <div class="col-sm-11">
+              <textarea pInputTextarea rows="5"></textarea>
+            </div>
+          </div>
+          <div class="btn-container">
+             <button type="submit" class="btn btn-success btn-margin-right"><i class="fa fa-save"></i>儲存</button>
+                <button type="reset" class="btn btn-danger"><i class="fa  fa-times"></i>取消</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="step-wrapper">
+      <div class="step-title">
+        <div class="step-num">
+          2
+        </div>
+        <h3 class="title">
+          銷帳明細（Assigner填寫）
+        </h3>
+      </div>
+      <div class="step-content">
+        <form class="form-horizontal">
+          <h3 class="sub-title">(三）指派相關資訊</h3>
+          <div class="form-group">
+            <label class="control-label col-sm-1">Assigner<br/>說明</label>
+            <div class="col-sm-11">
+              <textarea pInputTextarea rows="5"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">取消指派</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+            <label class="control-label col-sm-1">原GTAIS字數</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID"
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">已指派<br/>字數（含0017)</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID" 
+                     pInputText>
+            </div>
+            <label class="control-label col-sm-1">未指派<br/>字數（應取消字數)</label>
+            <div class="col-sm-5">
+              <input type="text" id="CustomerID" 
+                     pInputText>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">譯費<br/>處理方式</label>
+            <div class="col-sm-11">
+              <textarea pInputTextarea rows="5"></textarea>
+            </div>
+          </div>
+          <h3 class="sub-title">(四）Assigner主管裁定Assigner責任及譯費處理方式</h3>
+          <div class="form-group">
+            <label class="control-label col-sm-1">主管裁定</label>
+            <div class="col-sm-11">
+              <textarea pInputTextarea rows="5"></textarea>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="btn btn-success btn-margin-right"><i class="fa fa-save"></i>儲存</button>
+               <button type="reset" class="btn btn-danger"><i class="fa  fa-times"></i>取消</button>
+         </div>
+        </form>
+      </div>
+    </div>
+    <div class="step-wrapper">
+      <div class="step-title">
+        <div class="step-num">
+          3
+        </div>
+        <h3 class="title">
+          核准銷帳（Sales主管填寫）
+        </h3>
+      </div>
+      <div class="step-content">
+        <form class="form-horizontal">
+          <h3 class="sub-title">(五）最後裁定</h3>
+          <div class="form-group">
+            <label class="col-sm-1"></label>
+            <div class="col-sm-4">
+              <p-radioButton name="final"  inputId="final_1"></p-radioButton>
+              <label class="label-txt" for="final_1">A.無條件准銷</label>
+            </div>
+            <div class="col-sm-4">
+              <p-radioButton name="final"  inputId="final_2"></p-radioButton>
+              <label class="label-txt" for="final_2">B.Sales負 部份/全部 責任</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-1"></label>
+            <div class="col-sm-11">
+              <textarea pInputTextarea rows="5"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-1">備註</label>
+            <div class="col-sm-11">
+              <textarea pInputTextarea rows="5"></textarea>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="btn btn-success btn-margin-right"><i class="fa fa-save"></i>儲存</button>
+               <button type="reset" class="btn btn-danger"><i class="fa  fa-times"></i>取消</button>
+         </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

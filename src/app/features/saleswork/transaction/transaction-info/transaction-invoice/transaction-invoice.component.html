@@ -1,0 +1,175 @@
+<div class="invoice-container">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-1">可開發票金額</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" name="CustomerAddress" value="1,000">
+      </div>
+      <label class="control-label col-sm-1">聯絡人Email</label>
+      <div class="col-sm-3">
+        <select type="text" class="form-control" name="CustomerAddress">
+          <option>請選擇聯絡人信箱</option>
+          <option>test01</option>
+          <option>test02</option>
+          <option>test03</option>
+          <option>test04</option>
+        </select> 
+      </div>
+    </div>
+    <div class="form-group btn-container">
+      <button type="button" class="btn  btn-success" (click)="pop_show();"><i class="fa fa-pencil"></i>開立電子發票</button>
+    </div>
+  </form>
+  <div class="form-group table-container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>交易單金額</th>
+          <th>發票品項</th>
+          <th>發票號碼</th>
+          <th>發票金額</th>
+          <th>折讓刪除金額</th>
+          <th class="cell-s">是否作廢</th>
+          <th>業務員</th>
+          <th>發票開立日期</th>
+          <th>發票備註</th>
+        </tr>  
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+           3,000
+          </td>
+          <td>翻譯費</td>
+          <td>12620024</td>
+          <td>2,000</td>
+          <td>
+            0
+          </td>
+          <td>
+            否
+          </td>
+          <td>
+            Shane
+          </td>
+          <td>
+            2020/08/02
+          </td>
+          <td class="memo">
+            過兩差木才也由著以生……調關氣點，水對還同言體們小益人議分格女！下寫連過百招之青大！位開心親器！處光愛府新人紙現紀對實？
+          </td>
+        </tr>
+        <tr>
+           <td>
+            3,000
+           </td>
+           <td>翻譯費</td>
+           <td>12620024</td>
+           <td>2,000</td>
+           <td>
+             0
+           </td>
+           <td>
+             否
+           </td>
+           <td>
+             Shane
+           </td>
+          <td>
+            2020/08/04
+          </td>
+          <td class="memo">
+            這是常……用次電防天；歷式有年人經；同木年以一式；名銷大效本，北沒人過度行新要不過長：急水放……那不當有上大國如我良長？
+          </td>
+        </tr>
+        <tr>
+           <td>
+            3,000
+           </td>
+           <td>翻譯費</td>
+           <td>12620024</td>
+           <td>2,000</td>
+           <td>
+             0
+           </td>
+           <td>
+             否
+           </td>
+           <td>
+             Shane
+           </td>
+          <td>
+            2020/08/11
+          </td>
+          <td class="memo">
+            者倒坡度研常唱英媽景才報也離因發發人小世不前年不樂青光者身天路……無心認；化完產。
+          </td>
+        </tr>
+      </tbody>
+    </table> 
+  </div>  
+</div>
+<!-- pop視窗 -->
+<div class="pop-wrapper">
+  <form class="form-horizontal">
+    <div class="form-group sub-title-container">
+      <div class="sub-title">
+        <i class="fa  fa-file-text fa-size-md"></i>
+        <h3>電子發票開立</h3>
+      </div>
+      <div>
+        <i class="fa  fa-times fa-size-md" (click)="pop_hide();"></i>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Liaison" placeholder="請輸入發票金額">發票金額</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="Liaison">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Liaison">統一/稅籍編號</label>
+      <div class="col-sm-10">
+        <select type="text" class="form-control" id="Liaison">
+          <option selected>請選擇</option>
+          <option>54231327</option>
+          <option>92357109</option>
+          <option>47812942</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Liaison">發票抬頭</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="Liaison">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Liaison">發票品項</label>
+      <div class="col-sm-10">
+        <select type="text" class="form-control" id="Liaison">
+          <option selected>請選擇發票品項</option>
+          <option>翻譯費</option>
+          <option>口譯設備</option>
+          <option>印刷費用</option>
+          <option>排版費用</option>
+          <option>打字</option>
+          <option>公證費</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Liaison">發票備註</label>
+      <div class="col-sm-10">
+        <textarea type="text" class="form-control" id="Liaison" rows="3" placeholder="請輸入發票備註">
+        </textarea >
+      </div>
+    </div>
+    <div class="form-group">
+      <div>
+        <button type="button" class="btn btn-success btn-margin-right"><i class="fa  fa-check"></i>儲存設定</button>
+        <button type="button" class="btn btn-danger btn-margin-right"><i class="fa  fa-times"></i>取消設定</button>
+      </div>
+    </div>
+  </form>
+</div>

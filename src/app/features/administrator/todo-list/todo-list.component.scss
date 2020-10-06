@@ -1,0 +1,62 @@
+.todo-list-container{
+    margin: 0 0 30px;
+    width: 100%;
+    min-height: 350px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.tab-container{
+    padding: 10px;
+}
+.prime-ng-table{
+    padding: 10px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    height: 34px;
+    color: #fff;
+    background-color: #8DB6B2;
+}
+body .ui-table .ui-table-tbody > tr > td{
+    border: none;
+}
+button{
+    margin: 0 10px;
+    border-radius: 50%;
+}
+input[type="text"], input[type="number"], input[type="email"] {
+    width: 100%;
+}
+
+.ui-resizable-column{
+    .memo{
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .all-memo{
+        display: none;
+        padding: 3px;
+        position: absolute; 
+        top: 20px; 
+        left: 10px;
+        width: 92%;
+        z-index: 100;
+        border:1px solid #084460;
+        background-color: #fff;
+        color: #084460; 
+    }
+    &:hover{
+        .all-memo{
+            display: block;
+        }
+    }
+}
+    
+
+    
